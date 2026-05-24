@@ -19,6 +19,8 @@ Comprehensive training programs designed to equip professionals with real-world 
 | Prompt Engineering | 5 weeks | Advanced | Live Cohort | Techniques, Optimization, Chaining | $3,499 |
 | Building AI Agents | 10 weeks | Advanced | Live Cohort | Architecture, Tools, Deployment | $4,999 |
 | Fine-tuning & MLOps | 12 weeks | Expert | Hybrid | Fine-tuning, Pipelines, Monitoring | $4,999 |
+| AI Agents & Advanced Fine-Tuning Bootcamp | 12 weeks | Expert | Hybrid | Agents, MCP, LoRA/qLoRA, PPO/DPO/GRPO, Ray, A2A, Capstone | $3,700 |
+| LLM & Enterprise RAG Bootcamp | 12 weeks | Expert | Hybrid | Embeddings, Chunking, Funnel, GraphRAG, Vision, Agentic RAG, Evals | $3,700 |
 
 ---
 
@@ -109,12 +111,9 @@ Enterprise solutions designed for team and organizational learning.
 
 ---
 
-## Expert Instructors
+## Instructor
 
-- **Sarah Anderson** — AI Strategy & Leadership. 15+ years enterprise tech, specialized in AI transformation strategy and organizational change management.
-- **Michael Kumar** — Engineering & Architecture. ML engineer with expertise in production systems; leads advanced technical courses and agent development.
-- **Jessica Liu** — Product & Implementation. Product leader experienced in AI product development; teaches practical application and deployment courses.
-- **Dr. Prem** — Research & Innovation. PhD in AI/ML; conducts research in advanced AI topics and leads cutting-edge technical courses.
+- **Pavan R** — Lead instructor across all Proxiant Academy programs. Designs and delivers the full course catalog, leads the live cohort sessions, and supports learners through the dedicated Discord community and 1-on-1 office hours.
 
 ---
 
