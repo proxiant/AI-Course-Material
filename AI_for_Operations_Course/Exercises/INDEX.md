@@ -1,14 +1,31 @@
-# Proxiant Academy — AI for Operations Course
+# Proxiant Academy | AI for Operations Course
 
 ## Exercise Materials Index
 
-This directory contains 24 professionally-formatted Word documents (DOCX) for the comprehensive AI for Operations course.
+This directory contains 24 Word documents (DOCX) for the AI for Operations course: one exercise sheet and one solution set for each of the 12 classes.
 
 ### Document Structure
 
 Each of the 12 classes includes:
-- **Class_XX_Exercises.docx** - Student exercise sheets with 5 exercises per class
-- **Class_XX_Solutions.docx** - Complete solutions with code and explanations
+- **Class_XX_Exercises.docx**: student exercise sheets with 5 exercises per class
+- **Class_XX_Solutions.docx**: complete solutions with working code, explanations, and expected output
+
+### File List
+
+| Class | Exercises | Solutions |
+|-------|-----------|-----------|
+| 01 | Class_01_Exercises.docx | Class_01_Solutions.docx |
+| 02 | Class_02_Exercises.docx | Class_02_Solutions.docx |
+| 03 | Class_03_Exercises.docx | Class_03_Solutions.docx |
+| 04 | Class_04_Exercises.docx | Class_04_Solutions.docx |
+| 05 | Class_05_Exercises.docx | Class_05_Solutions.docx |
+| 06 | Class_06_Exercises.docx | Class_06_Solutions.docx |
+| 07 | Class_07_Exercises.docx | Class_07_Solutions.docx |
+| 08 | Class_08_Exercises.docx | Class_08_Solutions.docx |
+| 09 | Class_09_Exercises.docx | Class_09_Solutions.docx |
+| 10 | Class_10_Exercises.docx | Class_10_Solutions.docx |
+| 11 | Class_11_Exercises.docx | Class_11_Solutions.docx |
+| 12 | Class_12_Exercises.docx | Class_12_Solutions.docx |
 
 ### Course Outline
 
@@ -30,18 +47,9 @@ Each of the 12 classes includes:
 ### Exercise Types
 
 Each class contains a mix of:
-- **Conceptual** (1-2): Theory, understanding, and analysis
-- **Analytical** (1-2): Problem-solving with data
-- **Hands-on Coding** (1-2): Implementation tasks
-
-### Real-World Scenarios
-
-Exercises include practical business contexts:
-- Manufacturing with 10K+ daily sensors
-- Supply chains with 500K+ SKUs
-- Logistics with 200+ delivery locations
-- Demand planning with 24+ months history
-- Equipment maintenance with continuous monitoring
+- **Conceptual**: theory, understanding, and analysis
+- **Analytical**: problem-solving with data
+- **Hands-on Coding**: implementation tasks
 
 ### Technologies Covered
 
@@ -56,85 +64,67 @@ Exercises include practical business contexts:
 
 **Data Engineering**
 - Apache Kafka, InfluxDB, TimescaleDB
-- Pandas, NumPy, feature engineering
+- pandas, NumPy, feature engineering
 
 **Analytics & Simulation**
 - PM4Py (process mining)
 - SimPy (discrete event simulation)
 - DoWhy (causal inference)
-- Kaplan-Meier (survival analysis)
+- lifelines (survival analysis)
 
 ### Key Metrics & Concepts
 
-- **Forecasting**: MAPE, WAPE, RMSSE, CRPS, hierarchical reconciliation
+- **Forecasting**: MAPE, WAPE, RMSSE, hierarchical reconciliation
 - **Supply Chain**: EOQ, fill rates, multi-echelon optimization, bullwhip effect
 - **Quality**: Cp/Cpk, control charts, Western Electric rules
 - **Maintenance**: FFT, RUL prediction, survival analysis, optimal intervals
-- **Operations**: Utilization, cycle time, throughput, cost optimization
+- **Operations**: utilization, cycle time, throughput, cost optimization
 
 ### Branding
 
-**Company**: Proxiant Academy — AI for Operations
+**Company**: Proxiant Academy
 **Colors**:
-- Primary: #1B365D (Dark Blue) - Headers
-- Secondary: #2E86AB (Medium Blue) - Subheadings
-- Accent: #4CAF50 (Green) - Highlights
+- Primary: #1B365D (Navy), headers
+- Secondary: #2E86AB (Teal), subheadings
+- Accent: #4CAF50 (Green), highlights
 - Text: #333333 (Dark Gray)
 
 **Format**: Microsoft Word 2007+ (.docx)
 **Compatible With**: MS Word, LibreOffice, Google Docs
-**Total Size**: 244 KB
 
 ### Usage
 
 #### For Instructors
 1. Assign Class_XX_Exercises.docx to students
 2. Set deadlines and submission requirements
-3. Use Class_XX_Solutions.docx as answer key
-4. Grade based on code quality and explanations
+3. Use Class_XX_Solutions.docx as the answer key
+4. Grade on code quality and explanations
 
 #### For Students
-1. Read scenario and context carefully
+1. Read the scenario and context carefully
 2. Complete all coding tasks
 3. Test implementations thoroughly
 4. Compare with solutions for learning
-
-#### For Updates
-1. Edit `generate_exercises.js` script
-2. Modify class content or solution data
-3. Run script to regenerate all documents
-4. Files automatically update
 
 ### Document Statistics
 
 - **Total Documents**: 24
 - **Total Exercises**: 60 (5 per class)
-- **Total Size**: 244 KB (avg 10.2 KB per doc)
-- **Code Examples**: 70+
+- **Total Size**: ~660 KB
 - **Estimated Student Hours**: 120+ (10 per class)
 
 ### File Information
 
-Generated: February 14, 2025
+Updated: February 2026
 Format: Microsoft Word 2007+
 Encoding: UTF-8
-Status: Production Ready
-
-### Quick Access
-
-- **Exercises**: Class_01_Exercises.docx through Class_12_Exercises.docx
-- **Solutions**: Class_01_Solutions.docx through Class_12_Solutions.docx
-- **Generation Script**: `/sessions/zen-inspiring-dijkstra/generate_exercises.js`
-- **Documentation**: `/sessions/zen-inspiring-dijkstra/EXERCISE_GENERATION_COMPLETE.md`
-- **Quick Start**: `/sessions/zen-inspiring-dijkstra/EXERCISE_QUICK_START.txt`
-- **Delivery Report**: `/sessions/zen-inspiring-dijkstra/FINAL_DELIVERY_REPORT.txt`
 
 ### Support
 
-For questions, updates, or customizations:
-- Website: www.proxiant.com
-- Company: Proxiant Academy (Proxiant AI)
+- Website: proxiant.ai
+- Email: info@proxiant.com
+- Company: Proxiant Academy
 
 ---
 
-**All documents are ready for immediate use. Print, email, or share directly with students.**
+(c) 2026 Proxiant Academy. All documents are ready for immediate use.

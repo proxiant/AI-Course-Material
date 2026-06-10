@@ -12,6 +12,9 @@ LIGHT_GRAY_HEX = "E6E6E6"
 ACCENT_HEX = "1E2761"
 
 
+FOOTER_TEXT = "© 2026 Proxiant Academy | info@proxiant.com | proxiant.ai/training"
+
+
 def new_doc():
     doc = Document()
     style = doc.styles["Normal"]
@@ -22,6 +25,12 @@ def new_doc():
         section.bottom_margin = Inches(0.8)
         section.left_margin = Inches(0.9)
         section.right_margin = Inches(0.9)
+        fp = section.footer.paragraphs[0]
+        fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        run = fp.add_run(FOOTER_TEXT)
+        run.font.name = "Calibri"
+        run.font.size = Pt(9)
+        run.font.color.rgb = DARK_GRAY
     return doc
 
 

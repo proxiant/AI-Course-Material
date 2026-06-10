@@ -24,7 +24,7 @@ def build_catalogue():
     add_body(doc, f"Duration: {DURATION_WEEKS} weeks")
     add_body(doc, "Format: Hybrid (in-person at Fremont campus, live Zoom, or both)")
     add_body(doc, f"Tuition: {TUITION}")
-    add_body(doc, "Schedule: Sundays 11 AM PST (main session). Tuesday and Thursday 7 to 10 PM PST (labs). Wednesday 8:30 to 10 AM PST (summary and quiz).")
+    add_body(doc, "Schedule: Sundays 11 AM to 1 PM PT (main session) and 5 to 9 PM PT (lab block). Tuesday and Thursday 7 to 10 PM PT (labs). Wednesday 8:30 to 10 AM PT (summary and quiz).")
     add_body(doc, "")
 
     add_h1(doc, "Who This Is For")
@@ -40,7 +40,7 @@ def build_catalogue():
         "Design and operate multi-agent systems that survive production traffic.",
         "Apply the agentic loop, escalation ladders, and nine architectural patterns from working code.",
         "Build MCP tool servers with strong schemas and clean error semantics.",
-        "Optimize prompts programmatically with DSPy, GEPA, ORPO, and TextGrad.",
+        "Optimize prompts programmatically with DSPy, GEPA, OPRO, and TextGrad.",
         "Fine-tune base models with full FT, LoRA, qLoRA, and contrastive objectives.",
         "Train aligned models with PPO, DPO, and GRPO; understand where each fits.",
         "Scale training and serving on Ray with vLLM and Airflow.",
@@ -56,9 +56,9 @@ def build_catalogue():
         ("Agentic engineering", "Agentic loops, design patterns, multi-agent communication, tool-use maximalism, agentic RAG."),
         ("Fine-tuning", "LoRA, qLoRA, full fine-tuning, contrastive embedders, soft prompting, steering vectors."),
         ("Alignment with RL", "PPO, DPO, GRPO, TRPO, reward shaping, KL control, RLVR."),
-        ("Tooling and protocols", "MCP, FastMCP, Google ADK, LangGraph, A2A, Agent Cards, Nanda, Cisco Agency."),
+        ("Tooling and protocols", "MCP, FastMCP, Google ADK, LangGraph, A2A, Agent Cards, Nanda, Cisco's AGNTCY initiative."),
         ("Distributed systems", "Ray Core, Ray Train, Ray Tune, Ray Serve, vLLM, Airflow MLOps."),
-        ("Prompt optimization", "CO-STAR, DSPy (COPRO, MIPRO), GEPA, TextGrad, ORPO."),
+        ("Prompt optimization", "CO-STAR, DSPy (COPRO, MIPRO), GEPA, TextGrad, OPRO."),
     ]
     add_table(doc, ["Area", "Coverage"], skills, col_widths=[1.8, 5.0])
 
@@ -88,8 +88,8 @@ def build_catalogue():
 
     add_h1(doc, "Tuition and Registration")
     add_body(doc, TUITION)
-    add_body(doc, "Register at proxiant.com/bootcamp or email info@proxiant.com. "
-                  "Day 1 (June 7, 2026) is open to all interested participants free of charge.")
+    add_body(doc, "Register at https://proxiant.ai/training or email info@proxiant.com. "
+                  "Day 1 (October 4, 2026) is open to all interested participants free of charge.")
 
     add_h1(doc, "Twelve-Week Map")
     rows = [(f"Week {w['num']}", w["date"].split(", ")[1], w["title"], w["tagline"]) for w in WEEKS]
@@ -131,11 +131,11 @@ def build_syllabus():
 
     add_h1(doc, "Weekly Cadence")
     cadence = [
-        ("Sunday morning", "Theory session and research paper reading", "11 AM to 1 PM PST"),
-        ("Sunday evening", "Lab walkthrough and presentations", "5 PM to 9 PM PST"),
-        ("Tuesday", "Guided lab session", "7 PM to 10 PM PST"),
-        ("Thursday", "Guided lab session", "7 PM to 10 PM PST"),
-        ("Wednesday", "Summary and weekly quiz", "8:30 AM to 10 AM PST"),
+        ("Sunday morning", "Theory session and research paper reading", "11 AM to 1 PM PT"),
+        ("Sunday evening", "Lab walkthrough and presentations", "5 PM to 9 PM PT"),
+        ("Tuesday", "Guided lab session", "7 PM to 10 PM PT"),
+        ("Thursday", "Guided lab session", "7 PM to 10 PM PT"),
+        ("Wednesday", "Summary and weekly quiz", "8:30 AM to 10 AM PT"),
     ]
     add_table(doc, ["Day", "Activity", "Time"], cadence, col_widths=[1.4, 3.6, 2.0])
 

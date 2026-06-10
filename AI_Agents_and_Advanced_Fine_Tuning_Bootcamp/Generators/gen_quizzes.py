@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import (
     new_doc, add_title, add_subtitle, add_h1, add_h2, add_body,
-    add_bullet, add_numbered, add_divider,
+    add_bullet, add_numbered, add_divider, add_footer_brand,
 )
 from bootcamp_content import WEEKS
 from quiz_bank import QUIZZES
@@ -19,10 +19,10 @@ def build_quiz(week, with_answers=False):
     doc = new_doc()
     qz = QUIZZES[n]
 
-    suffix = " — Answer Key" if with_answers else ""
+    suffix = ": Answer Key" if with_answers else ""
     add_title(doc, f"Week {n} Quiz{suffix}", size=22)
     add_subtitle(doc, week["title"], size=14)
-    add_subtitle(doc, "Wednesday 8:30 to 10:00 AM PST | 30 minutes | 60 points", size=11)
+    add_subtitle(doc, "Wednesday 8:30 to 10:00 AM PT | 30 minutes | 60 points", size=11)
     add_divider(doc)
 
     add_h1(doc, "Instructions")
@@ -49,6 +49,9 @@ def build_quiz(week, with_answers=False):
             add_body(doc, model_answer(n, i))
         else:
             add_body(doc, "(Write 3 to 6 sentences in the space below.)")
+
+    add_divider(doc)
+    add_footer_brand(doc)
 
     folder = "Weekly_Quizzes"
     fname = f"Week_{n:02d}_Quiz{'_Solution' if with_answers else ''}.docx"
@@ -91,7 +94,7 @@ SHORT_ANSWERS = {
     (8, 3): "extract (pull from data lake) -> features (Spark step) -> train (Ray Train) -> eval (gated on F1 > baseline + 0.5pp) -> deploy (canary 5%, promote on 24h health). Each task has retries, alerts, and explicit timeouts.",
 
     (9, 1): "Card fields: name, version, capabilities ('competitor_summary', 'market_size_estimate'), cost ($0.20 fixed), latency (P50: 12s, P95: 30s), inputs (company URL, market), outputs (Markdown report), auth (OAuth 2.1), contact (email).",
-    (9, 2): "Nanda: federated, low operational burden, low identity guarantees. Cisco Agency: central identity, higher trust, requires authority buy-in. Many production systems start Nanda for breadth, migrate to Agency for sensitive contexts.",
+    (9, 2): "Nanda: federated, low operational burden, low identity guarantees. Cisco's AGNTCY initiative: central identity, higher trust, requires authority buy-in. Many production systems start Nanda for breadth, migrate to AGNTCY for sensitive contexts.",
     (9, 3): "Rolling certificate authority issuance with overlapping validity windows. Clients accept both old and new CAs during transition. Use short-lived (24h) leaf certs. Automate rotation via cert-manager or similar; never manual.",
 
     (10, 1): "Delete: dead-code endpoints, duplicate logging, unused feature flags, optimization layers that never fire, defensive try-except blocks around code that cannot fail. Each deletion reduces failure surface.",

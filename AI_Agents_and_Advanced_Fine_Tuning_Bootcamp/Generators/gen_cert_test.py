@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import (
     new_doc, add_title, add_subtitle, add_h1, add_h2, add_body,
-    add_bullet, add_divider, add_table,
+    add_bullet, add_divider, add_table, add_footer_brand,
 )
 from quiz_bank import QUIZZES
 
@@ -31,7 +31,7 @@ def sample_per_week():
 
 SCENARIOS = [
     {
-        "title": "Scenario A: Production agent design",
+        "title": "Production agent design",
         "prompt": (
             "Your team is asked to build an agent that answers customer "
             "billing questions over 12 internal systems. Latency target P95 "
@@ -48,7 +48,7 @@ SCENARIOS = [
         ],
     },
     {
-        "title": "Scenario B: Fine-tuning vs RAG",
+        "title": "Fine-tuning vs RAG",
         "prompt": (
             "A product wants the model to consistently follow a specific "
             "structured-JSON response format for 20 internal tools, while "
@@ -65,7 +65,7 @@ SCENARIOS = [
         ],
     },
     {
-        "title": "Scenario C: Alignment method selection",
+        "title": "Alignment method selection",
         "prompt": (
             "You have 50K preference pairs and access to a 13B base model. "
             "You also have a verifier for 30% of the task space (SQL queries "
@@ -81,7 +81,7 @@ SCENARIOS = [
         ],
     },
     {
-        "title": "Scenario D: System architecture",
+        "title": "System architecture",
         "prompt": (
             "Sketch a production-grade agentic RAG system for legal "
             "research. Multi-hop queries are common. Constraints: P95 latency "
@@ -101,7 +101,7 @@ SCENARIOS = [
 
 def build_exam(with_answers=False):
     doc = new_doc()
-    suffix = " — Answer Key" if with_answers else ""
+    suffix = ": Answer Key" if with_answers else ""
     add_title(doc, f"PCAP-Agents Final Certification Exam{suffix}", size=22)
     add_subtitle(doc, "AI Agents and Advanced Fine-Tuning Bootcamp", size=14)
     add_subtitle(doc, "Duration: 3 hours | Total: 240 points | Pass: 168 (70%)", size=11)
@@ -148,6 +148,9 @@ def build_exam(with_answers=False):
         "across the Proxiant alumni network and partner employers. The "
         "certificate is valid for 3 years; renewal requires either a "
         "completed continuing-education credit or re-examination.")
+
+    add_divider(doc)
+    add_footer_brand(doc)
 
     fname = f"PCAP_Agents_Final_Exam{'_Solution' if with_answers else ''}.docx"
     out = os.path.join(ROOT, "Certification_Test", fname)

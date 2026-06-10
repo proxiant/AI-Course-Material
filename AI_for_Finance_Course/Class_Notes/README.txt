@@ -87,7 +87,7 @@ USAGE INSTRUCTIONS
 BRANDING INFORMATION
 --------------------
 Company: Proxiant Academy
-Website: www.proxiant.com
+Website: https://proxiant.ai
 Tagline: "Master AI. Professionally."
 Course: AI for Finance (12 Classes)
 Instructor: Proxiant Academy Team
@@ -111,8 +111,8 @@ Class 12: Capstone projects and career planning
 
 CERTIFICATION
 -------------
-These documents prepare students for the PCAP (Proxiant Certified 
-AI Practitioner) certification:
+These documents prepare students for the PCAP (Proxiant Certified
+AI Professional) certification:
 - 100 multiple-choice questions
 - 3 hours duration
 - 70% pass threshold
@@ -128,7 +128,7 @@ Topic Distribution on PCAP Exam:
 SUPPORT & RESOURCES
 -------------------
 For questions or support, contact Proxiant Academy
-Website: www.proxiant.com
+Email: info@proxiant.com | Website: https://proxiant.ai
 
 Generated: February 14, 2026
 Tool: Node.js + docx library v9.5.1

@@ -159,6 +159,15 @@ def add_page_break(doc):
     doc.add_page_break()
 
 
+def add_footer_brand(doc):
+    """Standard closing line: brand and copyright."""
+    p = doc.add_paragraph()
+    run = p.add_run("© 2026 Proxiant Academy | info@proxiant.com | https://proxiant.ai/training")
+    run.font.size = Pt(9)
+    run.font.color.rgb = DARK_GRAY
+    return p
+
+
 def add_header_block(doc, course, doc_type, week_num=None, week_title=None):
     add_title(doc, "Proxiant Academy")
     add_subtitle(doc, course)

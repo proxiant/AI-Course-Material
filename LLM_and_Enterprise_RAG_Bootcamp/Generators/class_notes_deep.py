@@ -73,7 +73,8 @@ DEEP = {
                 "body": (
                     "Brute-force similarity search is O(n) per query. For "
                     "a million vectors at 768 dimensions, that is roughly "
-                    "750 MB of data to scan per query. ANN trades a small "
+                    "3 GB at float32 (768 dims × 4 bytes × 1M) to scan per "
+                    "query. ANN trades a small "
                     "amount of recall for orders of magnitude speedup. "
                     "HNSW is the default for moderate scale; IVF for "
                     "memory pressure; product quantization for both at "
@@ -168,6 +169,7 @@ DEEP = {
                     "from negatives in one operation."
                 ),
                 "code": (
+                    "import torch\n"
                     "import torch.nn.functional as F\n\n"
                     "def info_nce(anchors, positives, temperature=0.1):\n"
                     "    logits = anchors @ positives.T / temperature\n"

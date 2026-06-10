@@ -128,7 +128,7 @@ TRANSFORMERS = [
     ("What challenges arise from the fixed and limited attention span in vanilla Transformers?",
      [
         "The vanilla transformer has a fixed maximum context length set at pretraining time "
-        "(typically 512 for BERT, 2048 for GPT-2, up to 200K+ for modern LLMs). Inputs "
+        "(typically 512 for BERT, 1024 for GPT-2, up to 200K+ for modern LLMs). Inputs "
         "longer than this must be truncated or chunked, losing information.",
         "Effects: tasks requiring long-range dependencies (long documents, codebases, video) "
         "lose context that should inform the prediction. The model cannot reference details "

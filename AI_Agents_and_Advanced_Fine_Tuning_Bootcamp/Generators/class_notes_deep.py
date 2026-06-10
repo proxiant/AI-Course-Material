@@ -284,7 +284,7 @@ DEEP = {
             "We treat prompts as programs that can be compiled. Start with "
             "hand-crafted prompts (CO-STAR, few-shot, refusal). Then move to "
             "automatic optimization with DSPy. Then to evolutionary approaches "
-            "(GEPA, TextGrad, ORPO) that search a much larger space."
+            "(GEPA, TextGrad, OPRO) that search a much larger space."
         ),
         "sections": [
             {
@@ -349,15 +349,19 @@ DEEP = {
                 ),
             },
             {
-                "h": "6. Evolutionary methods: GEPA, TextGrad, ORPO",
+                "h": "6. Prompt optimizers: GEPA, TextGrad, OPRO",
                 "body": (
                     "GEPA is genetic with reflection: an LLM critiques each "
                     "candidate before mutation. TextGrad treats text as a "
-                    "tensor and uses a critic LLM as the gradient. ORPO unifies "
-                    "preference optimization with reference-free training. Each "
-                    "fits a different stage of the lifecycle: GEPA for "
-                    "exploration, TextGrad for refinement, ORPO for direct "
-                    "preference data."
+                    "tensor and uses a critic LLM as the gradient. OPRO uses "
+                    "an LLM as the optimizer: it reads the trajectory of "
+                    "prior prompts and their scores, then proposes better "
+                    "prompts. Each fits a different stage of the lifecycle: "
+                    "GEPA for exploration, TextGrad for refinement, OPRO for "
+                    "iterative scored search. A note on naming: ORPO unifies "
+                    "preference optimization with reference-free training, "
+                    "but ORPO itself is a preference fine-tuning method "
+                    "(weights, not prompts); it pairs with DPO in Week 6."
                 ),
             },
         ],
@@ -742,7 +746,7 @@ DEEP = {
     9: {
         "intro": (
             "Agent-to-agent communication is becoming a protocol problem. We "
-            "cover A2A, Agent Cards, discovery (Nanda, Cisco Agency), the "
+            "cover A2A, Agent Cards, discovery (Nanda, Cisco's AGNTCY initiative), the "
             "security boundary, and three cooperation protocols (role-based, "
             "voting-based, debate-based). The lab connects Google ADK to a "
             "custom client over A2A with mTLS."
@@ -770,10 +774,10 @@ DEEP = {
                 ),
             },
             {
-                "h": "3. Discovery: Nanda and Cisco Agency",
+                "h": "3. Discovery: Nanda and Cisco's AGNTCY initiative",
                 "body": (
                     "Nanda proposes a federated registry: anyone can publish, "
-                    "anyone can query. Cisco Agency proposes a directory "
+                    "anyone can query. Cisco's AGNTCY initiative proposes a directory "
                     "model with identity guarantees: agents have signed "
                     "identities verifiable by a central authority. Both compete "
                     "for the role DNS plays for hostnames. No winner yet; "

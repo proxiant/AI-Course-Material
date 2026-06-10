@@ -4,7 +4,7 @@ Master content map for AI Agents & Advanced Fine-Tuning Bootcamp.
 Style rules (project CLAUDE.md): no em dashes, no AI cliches, plain declarative prose.
 """
 
-START_DATE = "Sunday, June 7, 2026"
+START_DATE = "Sunday, October 4, 2026"
 DURATION_WEEKS = 12
 TUITION = "$3,700 (or $3,600 if paid by check or Zelle upfront)"
 
@@ -15,7 +15,7 @@ PREREQ = ("Working Python (3.10+), comfort with PyTorch or TensorFlow basics, "
 WEEKS = [
     {
         "num": 1,
-        "date": "Sunday, June 7, 2026",
+        "date": "Sunday, October 4, 2026",
         "title": "Introduction to AI Agents",
         "tagline": "The agentic loop, autonomy, and your first working agent",
         "summary": (
@@ -94,7 +94,7 @@ WEEKS = [
     },
     {
         "num": 2,
-        "date": "Sunday, June 14, 2026",
+        "date": "Sunday, October 11, 2026",
         "title": "Enterprise AI",
         "tagline": "Reasoning workflows, agentic RAG, and multi-agent teams",
         "summary": (
@@ -171,7 +171,7 @@ WEEKS = [
     },
     {
         "num": 3,
-        "date": "Sunday, June 21, 2026",
+        "date": "Sunday, October 18, 2026",
         "title": "Model Context Protocol (MCP)",
         "tagline": "Tool servers, schemas, and the tool-use maximalist pattern",
         "summary": (
@@ -249,14 +249,14 @@ WEEKS = [
     },
     {
         "num": 4,
-        "date": "Sunday, June 28, 2026",
+        "date": "Sunday, October 25, 2026",
         "title": "Prompt Engineering and Optimization",
-        "tagline": "From CO-STAR to DSPy, GEPA, TextGrad, and ORPO",
+        "tagline": "From CO-STAR to DSPy, GEPA, TextGrad, and OPRO",
         "summary": (
             "Prompts are programs. Move from hand-crafted prompting (CO-STAR, "
             "few-shot, hallucination mitigation) to optimization frameworks that "
             "search prompt space programmatically. Cover DSPy with COPRO and MIPRO, "
-            "then evolutionary approaches (GEPA, TextGrad, ORPO)."
+            "then prompt optimizers that search a larger space (GEPA, TextGrad, OPRO)."
         ),
         "objectives": [
             "Apply the CO-STAR framework to structure complex prompts",
@@ -282,10 +282,14 @@ WEEKS = [
             ("5. COPRO and MIPRO",
              "COPRO optimizes instructions through coordinate ascent. MIPRO jointly "
              "optimizes instructions and demonstrations with Bayesian search."),
-            ("6. GEPA, TextGrad, and ORPO",
+            ("6. Prompt optimizers: GEPA, TextGrad, OPRO",
              "GEPA is genetic with reflection. TextGrad treats text as a tensor and "
-             "uses a critic LLM as the gradient. ORPO unifies preference optimization "
-             "with reference-free training. Each fits a different stage."),
+             "uses a critic LLM as the gradient. OPRO uses an LLM as the optimizer: "
+             "it reads the trajectory of prior prompts and their scores, then "
+             "proposes better prompts. Each fits a different stage. Do not confuse "
+             "OPRO with ORPO, which unifies preference optimization with "
+             "reference-free training; ORPO is a preference fine-tuning method "
+             "(weights, not prompts) and pairs with DPO in Week 6."),
         ],
         "papers": [
             ("DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
@@ -337,7 +341,7 @@ WEEKS = [
     },
     {
         "num": 5,
-        "date": "Sunday, July 5, 2026",
+        "date": "Sunday, November 1, 2026",
         "title": "Fine-Tuning Foundations and Economy",
         "tagline": "Embeddings, contrastive loss, LoRA, qLoRA, and Chinchilla scaling",
         "summary": (
@@ -422,7 +426,7 @@ WEEKS = [
     },
     {
         "num": 6,
-        "date": "Sunday, July 12, 2026",
+        "date": "Sunday, November 8, 2026",
         "title": "Reinforcement Learning Fundamentals",
         "tagline": "MDPs, value functions, PPO, DPO, GRPO, and alignment",
         "summary": (
@@ -501,7 +505,7 @@ WEEKS = [
     },
     {
         "num": 7,
-        "date": "Sunday, July 19, 2026",
+        "date": "Sunday, November 15, 2026",
         "title": "Multiple Agents and Deep RL",
         "tagline": "Design patterns, uncertainty, and RL on real LLMs",
         "summary": (
@@ -591,7 +595,7 @@ WEEKS = [
     },
     {
         "num": 8,
-        "date": "Sunday, July 26, 2026",
+        "date": "Sunday, November 22, 2026",
         "title": "Distributed Computing with Ray",
         "tagline": "Tasks, actors, parallelism, and production MLOps",
         "summary": (
@@ -664,13 +668,13 @@ WEEKS = [
     },
     {
         "num": 9,
-        "date": "Sunday, August 2, 2026",
+        "date": "Sunday, November 29, 2026",
         "title": "Agent Communications",
         "tagline": "A2A, discovery, AuthN/AuthZ, and cooperation protocols",
         "summary": (
             "Agent-to-agent communication is becoming a protocol problem, not a "
             "framework problem. Cover A2A, Agent Cards, discovery via Nanda and "
-            "Cisco Agency, and the security boundary. Then cover cooperation "
+            "Cisco's AGNTCY initiative, and the security boundary. Then cover cooperation "
             "protocols: role-based, voting-based, and debate-based."
         ),
         "objectives": [
@@ -689,7 +693,7 @@ WEEKS = [
              "limitations, and contact metadata. Read by both humans and other "
              "agents."),
             ("3. Discovery",
-             "Nanda is a federated registry. Cisco Agency proposes a directory "
+             "Nanda is a federated registry. Cisco's AGNTCY initiative proposes a directory "
              "model with identity guarantees. Both compete for the role DNS plays "
              "for hostnames."),
             ("4. AuthN and AuthZ between agents",
@@ -742,7 +746,7 @@ WEEKS = [
     },
     {
         "num": 10,
-        "date": "Sunday, August 9, 2026",
+        "date": "Sunday, December 6, 2026",
         "title": "Architecting Agentic Systems",
         "tagline": "Nine production patterns and the doctrine of ruthless simplification",
         "summary": (
@@ -823,7 +827,7 @@ WEEKS = [
     },
     {
         "num": 11,
-        "date": "Sunday, August 16, 2026",
+        "date": "Sunday, December 13, 2026",
         "title": "Agentic RAG and Agentic Training",
         "tagline": "Multi-hop retrieval, HyDE, and trajectory-based training",
         "summary": (
@@ -900,7 +904,7 @@ WEEKS = [
     },
     {
         "num": 12,
-        "date": "Sunday, August 23, 2026",
+        "date": "Sunday, December 20, 2026",
         "title": "The Path Ahead (Capstone Week)",
         "tagline": "RAG vs fine-tuning, RLVR, MARL, and capstone presentations",
         "summary": (

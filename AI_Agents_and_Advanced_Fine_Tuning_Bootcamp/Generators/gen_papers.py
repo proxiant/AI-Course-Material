@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import (
     new_doc, add_title, add_subtitle, add_h1, add_h2, add_h3, add_body,
-    add_bullet, add_divider,
+    add_bullet, add_divider, add_footer_brand,
 )
 from bootcamp_content import WEEKS, slug
 
@@ -147,6 +147,9 @@ def build_one(week):
     add_h1(doc, "Submission")
     add_bullet(doc, "Each student submits a 200-word reflection on Discord by Saturday EOD.")
     add_bullet(doc, "Reflections feed into the Sunday discussion and the Wednesday quiz.")
+
+    add_divider(doc)
+    add_footer_brand(doc)
 
     fname = f"Week_{n:02d}_Paper_Reading_{slug(week)}.docx"
     out = os.path.join(ROOT, "Research_Papers", fname)

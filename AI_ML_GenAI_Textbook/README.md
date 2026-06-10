@@ -3,7 +3,7 @@
 **Author:** Pavan R, Proxiant Academy
 **Edition:** 1 | 2026
 
-A full-length textbook covering modern AI from mathematical foundations through production engineering. Sixteen chapters across seven parts, 36 embedded diagrams, ~32,000 words.
+A full-length textbook covering modern AI from mathematical foundations through production engineering. Sixteen chapters across seven parts, 36 embedded diagrams, about 31,000 words.
 
 ---
 
@@ -13,40 +13,40 @@ Located in `Output/`:
 
 | File | Size | Purpose |
 |---|---|---|
-| `AI_ML_GenAI_Comprehensive_Textbook.docx` | 2.3 MB | Editable Word document with embedded diagrams |
-| `AI_ML_GenAI_Comprehensive_Textbook.pdf` | 2.8 MB | Print-ready PDF |
-| `AI_ML_GenAI_Comprehensive_Textbook.txt` | 243 KB | Plain text (no images) |
+| `AI_ML_GenAI_Comprehensive_Textbook.docx` | 2.4 MB | Editable Word document with embedded diagrams |
+| `AI_ML_GenAI_Comprehensive_Textbook.pdf` | 2.9 MB (131 pages) | Print-ready PDF |
+| `AI_ML_GenAI_Comprehensive_Textbook.txt` | 249 KB | Plain text (no images) |
 
 ---
 
 ## Structure
 
-**Part I — Foundations**
+**Part I: Foundations**
 - Chapter 1: Introduction to AI and Modern Machine Learning
 - Chapter 2: Mathematical Foundations
 - Chapter 3: Neural Networks and Deep Learning
 
-**Part II — Natural Language Processing and Transformers**
+**Part II: Natural Language Processing and Transformers**
 - Chapter 4: Classical Natural Language Processing
 - Chapter 5: The Transformer Architecture
 
-**Part III — Embeddings and Pretrained Models**
+**Part III: Embeddings and Pretrained Models**
 - Chapter 6: Word and Sentence Embeddings
 - Chapter 7: Pretrained Language Models
 
-**Part IV — Vision and Multimodal AI**
+**Part IV: Vision and Multimodal AI**
 - Chapter 8: Computer Vision and Multimodal Models
 
-**Part V — Prompts, Fine-Tuning, and Alignment**
+**Part V: Prompts, Fine-Tuning, and Alignment**
 - Chapter 9: Prompt Engineering and Optimization
 - Chapter 10: Fine-Tuning Large Language Models
 - Chapter 11: Alignment with Reinforcement Learning
 
-**Part VI — Retrieval, Vectors, and RAG**
+**Part VI: Retrieval, Vectors, and RAG**
 - Chapter 12: Vector Databases and Approximate Nearest Neighbor Search
 - Chapter 13: Retrieval-Augmented Generation
 
-**Part VII — Production: LLMOps, Evaluation, Ethics**
+**Part VII: Production: LLMOps, Evaluation, Ethics**
 - Chapter 14: LLMOps and Production System Design
 - Chapter 15: Evaluation Methodologies
 - Chapter 16: Ethics, Safety, and the Path Ahead
@@ -60,7 +60,7 @@ Located in `Output/`:
 
 ## Diagrams
 
-40 PNG diagrams in `Diagrams/`, including:
+40 PNG diagrams in `Diagrams/` (36 are embedded in the book; the rest are spares for future chapters), including:
 
 - ANN architecture, single neuron, activation functions, backpropagation, vanishing/exploding gradients
 - Gradient descent variants, bias-variance tradeoff, overfitting curves, dropout, data splits

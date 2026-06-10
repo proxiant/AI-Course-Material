@@ -7,7 +7,7 @@ import matplotlib.patches as patches
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Rectangle, Circle, Polygon
 import numpy as np
 
-OUT = "/Users/pkr465/work/AI-Course-Material/AI_ML_GenAI_Textbook/Diagrams"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Diagrams")
 os.makedirs(OUT, exist_ok=True)
 
 NAVY = "#1E2761"

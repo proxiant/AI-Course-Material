@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import (
     new_doc, add_title, add_subtitle, add_h1, add_h2, add_h3, add_body,
-    add_bullet, add_numbered, add_code, add_table, add_divider,
+    add_bullet, add_numbered, add_code, add_table, add_divider, add_footer_brand,
 )
 from bootcamp_content import WEEKS
 from projects_bank import PROJECTS
@@ -18,7 +18,7 @@ def build_project(week, solution=False):
     proj = PROJECTS[n]
     doc = new_doc()
 
-    suffix = " — Reference Solution Sketch" if solution else ""
+    suffix = ": Reference Solution Sketch" if solution else ""
     add_title(doc, f"Week {n} Project Brief{suffix}", size=22)
     add_subtitle(doc, proj["title"], size=14)
     add_subtitle(doc, f"Bootcamp theme: {week['title']} | Due next Sunday before main session", size=11)
@@ -48,8 +48,8 @@ def build_project(week, solution=False):
 
     add_h1(doc, "Submission")
     add_bullet(doc, "Push to a private GitHub repo and add the TAs as collaborators.")
-    add_bullet(doc, "Tag the submission commit 'week-XX-submit'.")
-    add_bullet(doc, "Post the repo link in the bootcamp Discord by Sunday 11 AM PST.")
+    add_bullet(doc, f"Tag the submission commit 'week-{n:02d}-submit'.")
+    add_bullet(doc, "Post the repo link in the bootcamp Discord by Sunday 11 AM PT.")
 
     if solution:
         add_h1(doc, "Reference Solution Sketch")
@@ -63,6 +63,9 @@ def build_project(week, solution=False):
         add_h1(doc, "Common Failure Modes")
         for f in SOLUTION_SKETCHES[n].get("failures", []):
             add_bullet(doc, f)
+
+    add_divider(doc)
+    add_footer_brand(doc)
 
     folder = "Weekly_Projects"
     fname = f"Week_{n:02d}_Project{'_Solution' if solution else ''}.docx"

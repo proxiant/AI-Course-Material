@@ -74,9 +74,9 @@ Upon successful completion, students will be able to:
 
 ## Course Materials Inventory
 
-### Course-Level Documents (4 files)
+### Course-Level Documents (6 files)
 
-1. **AI_Fundamentals_Course_Catalogue.docx** (16 KB)
+1. **AI_Fundamentals_Course_Catalogue.docx** (23 KB)
    - Course overview and structure
    - Target audience and learning objectives
    - Weekly topic breakdown
@@ -84,7 +84,7 @@ Upon successful completion, students will be able to:
    - PCAP specification table
    - Enrollment and exam pricing
 
-2. **AI_Fundamentals_Syllabus.docx** (15 KB)
+2. **AI_Fundamentals_Syllabus.docx** (22 KB)
    - Complete course syllabus
    - Detailed learning outcomes
    - Weekly schedule breakdown
@@ -92,13 +92,19 @@ Upon successful completion, students will be able to:
    - PCAP certification section
    - Required resources and references
 
-3. **Final_Certification_Test.docx** (21 KB)
+3. **Final_Certification_Test.docx** (19 KB)
    - Comprehensive 4-week final exam
    - Certification assessment material
 
-4. **Final_Certification_Test_Solution.docx** (28 KB)
+4. **Final_Certification_Test_Solution.docx** (26 KB)
    - Complete answer key
    - Detailed solutions and explanations
+
+5. **AI_Fundamentals_Course_Catalogue.pdf** (80 KB)
+   - PDF edition of the course catalogue
+
+6. **AI_Fundamentals_Syllabus.pdf** (193 KB)
+   - PDF edition of the course syllabus
 
 ---
 
@@ -107,10 +113,10 @@ Upon successful completion, students will be able to:
 ### Week 1: Foundations of Artificial Intelligence
 **Topic:** Understanding what AI is, its history, and core problem-solving approaches
 
-**Materials (8 files, 564 KB):**
-- Week1_Slides_Foundations_of_AI.pptx (462 KB) - Lecture slides
-- Week1_Class_Notes.docx (20 KB) - Detailed notes
-- Week1_Exercises.docx (13 KB) + Week1_Exercise_Solutions.docx (14 KB)
+**Materials (8 files, ~192 KB):**
+- Week1_Slides_Foundations_of_AI.pptx (106 KB) - Lecture slides
+- Week1_Class_Notes.docx (18 KB) - Detailed notes
+- Week1_Exercises.docx (13 KB) + Week1_Exercise_Solutions.docx (13 KB)
 - Week1_Assignment.docx (9.0 KB) + Week1_Assignment_Solution.docx (11 KB)
 - Week1_Project.docx (9.7 KB) + Week1_Project_Solution.docx (12 KB)
 
@@ -128,12 +134,12 @@ Upon successful completion, students will be able to:
 ### Week 2: Machine Learning Fundamentals
 **Topic:** Core ML paradigms and techniques for learning from data
 
-**Materials (8 files, 364 KB):**
-- Week2_Slides_Machine_Learning.pptx (273 KB) - Lecture slides
-- Week2_Class_Notes.docx (14 KB) - Detailed notes
-- Week2_Exercises.docx (10 KB) + Week2_Exercise_Solutions.docx (12 KB)
-- Week2_Assignment.docx (9.6 KB) + Week2_Assignment_Solution.docx (9.5 KB)
-- Week2_Project.docx (9.2 KB) + Week2_Project_Solution.docx (8.9 KB)
+**Materials (8 files, ~142 KB):**
+- Week2_Slides_Machine_Learning.pptx (75 KB) - Lecture slides
+- Week2_Class_Notes.docx (13 KB) - Detailed notes
+- Week2_Exercises.docx (10 KB) + Week2_Exercise_Solutions.docx (10 KB)
+- Week2_Assignment.docx (9.5 KB) + Week2_Assignment_Solution.docx (9.5 KB)
+- Week2_Project.docx (8.1 KB) + Week2_Project_Solution.docx (7.8 KB)
 
 **Topics Covered:**
 - ML pipeline and paradigms
@@ -151,12 +157,12 @@ Upon successful completion, students will be able to:
 ### Week 3: Deep Learning and Neural Networks
 **Topic:** Neural network architectures and applications
 
-**Materials (8 files, 540 KB):**
-- Week3_Slides_Deep_Learning.pptx (455 KB) - Lecture slides
+**Materials (8 files, ~185 KB):**
+- Week3_Slides_Deep_Learning.pptx (119 KB) - Lecture slides
 - Week3_Class_Notes.docx (9.8 KB) - Detailed notes
-- Week3_Exercises.docx (9.2 KB) + Week3_Exercise_Solutions.docx (9.5 KB)
-- Week3_Assignment.docx (9.3 KB) + Week3_Assignment_Solution.docx (9.6 KB)
-- Week3_Project.docx (9.4 KB) + Week3_Project_Solution.docx (11 KB)
+- Week3_Exercises.docx (9.2 KB) + Week3_Exercise_Solutions.docx (9.1 KB)
+- Week3_Assignment.docx (9.3 KB) + Week3_Assignment_Solution.docx (8.6 KB)
+- Week3_Project.docx (9.3 KB) + Week3_Project_Solution.docx (10 KB)
 
 **Topics Covered:**
 - Neural network fundamentals
@@ -175,13 +181,12 @@ Upon successful completion, students will be able to:
 ### Week 4: Generative AI, Ethics, and AI Strategy
 **Topic:** Modern AI applications, responsible AI, and organizational strategy
 
-**Materials (9 files, 472 KB):**
-- Week4_Slides_GenAI_Ethics_Strategy.pptx (359 KB) - Lecture slides
-- Week4_Class_Notes.docx (17 KB) - Detailed notes
-- Week4_Exercises.docx (12 KB) + Week4_Exercise_Solutions.docx (13 KB)
-- Week4_Assignment.docx (12 KB) + Week4_Assignment_Solution.docx (13 KB)
-- Week4_Project.docx (12 KB) + Week4_Project_Solution.docx (13 KB)
-- README.txt (6.0 KB) - Additional information
+**Materials (8 files, ~197 KB):**
+- Week4_Slides_GenAI_Ethics_Strategy.pptx (112 KB) - Lecture slides
+- Week4_Class_Notes.docx (15 KB) - Detailed notes
+- Week4_Exercises.docx (12 KB) + Week4_Exercise_Solutions.docx (12 KB)
+- Week4_Assignment.docx (11 KB) + Week4_Assignment_Solution.docx (12 KB)
+- Week4_Project.docx (10 KB) + Week4_Project_Solution.docx (12 KB)
 
 **Topics Covered:**
 - Large Language Models (LLMs)
@@ -201,11 +206,14 @@ Upon successful completion, students will be able to:
 
 ### Directory Structure
 ```
-AI Course Material/AI Fundamentals Course/
+AI-Course-Material/AI Fundamentals Course/
 ├── AI_Fundamentals_Course_Catalogue.docx
+├── AI_Fundamentals_Course_Catalogue.pdf
 ├── AI_Fundamentals_Syllabus.docx
+├── AI_Fundamentals_Syllabus.pdf
 ├── Final_Certification_Test.docx
 ├── Final_Certification_Test_Solution.docx
+├── Individual feedback Form -Team6.doc
 ├── COURSE_INDEX.md (this file)
 ├── Week 1/
 │   ├── Week1_Slides_Foundations_of_AI.pptx
@@ -242,17 +250,18 @@ AI Course Material/AI Fundamentals Course/
     ├── Week4_Assignment.docx
     ├── Week4_Assignment_Solution.docx
     ├── Week4_Project.docx
-    ├── Week4_Project_Solution.docx
-    └── README.txt
+    └── Week4_Project_Solution.docx
 ```
 
 ### Summary Statistics
 - **Total Files:** 40 (including this index)
 - **Total Directories:** 5
-- **DOCX Documents:** 33
+- **DOCX Documents:** 32
 - **PPTX Presentations:** 4
-- **Text Files:** 2
-- **Total Storage:** ~2.3 MB
+- **PDF Documents:** 2
+- **Markdown Files:** 1
+- **Legacy DOC Files:** 1
+- **Total Storage:** ~1.1 MB
 
 ---
 
@@ -293,10 +302,10 @@ AI Course Material/AI Fundamentals Course/
 
 | Week | Deliverables | Milestone |
 |------|--------------|-----------|
-| Week 1 | Exercise 1-3, Assignment 1, Project 1 | Foundations mastery |
-| Week 2 | Exercise 4-6, Assignment 2, Project 2 | ML fundamentals |
-| Week 3 | Exercise 7-9, Assignment 3, Project 3 | Deep learning |
-| Week 4 | Exercise 10-12, Assignment 4, Project 4, Final Exam | PCAP eligibility |
+| Week 1 | All Week 1 exercises, Assignment 1, Project 1 | Foundations mastery |
+| Week 2 | All Week 2 exercises, Assignment 2, Project 2 | ML fundamentals |
+| Week 3 | All Week 3 exercises, Assignment 3, Project 3 | Deep learning |
+| Week 4 | All Week 4 exercises, Assignment 4, Project 4, Final Exam | PCAP eligibility |
 
 ---
 
@@ -328,7 +337,7 @@ For course enrollment or inquiries, visit the Proxiant Academy website.
 ## 2026 Updates
 
 **Recent Updates to This Course:**
-- Updated branding from "Proxiant AI Academy" to "Proxiant Academy"
+- Updated branding to "Proxiant Academy"
 - Integrated PCAP certification details and specifications
 - Added enrollment fee: $1,499
 - Added exam cost: $199

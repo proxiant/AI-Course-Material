@@ -689,3 +689,279 @@ QUIZZES = {
         ],
     },
 }
+
+
+# Model answers for the short-answer questions, one list per week, in the
+# same order as QUIZZES[n]["short"]. Used in the answer-key documents.
+SHORT_ANSWERS = {
+    1: [
+        "Dense retrieval embeds query and document into a shared vector space "
+        "where proximity reflects meaning learned during training. Two texts "
+        "about the same concept land near each other even with zero lexical "
+        "overlap, so the match happens in semantic space. BM25 scores only "
+        "term overlap, so it returns nothing useful when the vocabulary "
+        "differs.",
+        "Build both indexes on the same 50M vectors and measure the five "
+        "numbers: build time, RAM footprint, recall@10 against brute-force "
+        "ground truth on a 1K-query sample, query throughput at target "
+        "concurrency, and update cost. Sweep ef_search for HNSW and nprobe "
+        "for IVF to plot recall against latency. Pick the index that meets "
+        "the recall target inside the latency and memory budgets on "
+        "production-shaped queries.",
+        "Example: document classification. An encoder (BERT family) fits "
+        "because the task needs a strong contextual representation of the "
+        "full input and no generation. A decoder pays for autoregressive "
+        "machinery the task never uses, and an encoder-decoder adds "
+        "cross-attention cost that only earns its keep on sequence-to-"
+        "sequence outputs like translation or summarization.",
+    ],
+    2: [
+        "Anisotropy means the embeddings occupy a narrow cone of the space, "
+        "so even unrelated texts show high cosine similarity and the metric "
+        "loses discriminative power. Two corrections: post-process with "
+        "whitening (or all-but-the-top PCA removal) to spread the "
+        "directions, or fine-tune with a contrastive objective such as "
+        "InfoNCE, which directly optimizes for alignment and uniformity.",
+        "logits = anchors @ positives.T / temperature; labels = "
+        "torch.arange(len(anchors)); loss = F.cross_entropy(logits, labels). "
+        "Temperature divides the logits before the softmax inside "
+        "cross-entropy: lower values sharpen the distribution and punish "
+        "hard negatives harder, higher values spread gradient across all "
+        "negatives.",
+        "Triplet loss can win when you have carefully curated (anchor, "
+        "positive, negative) triples with a meaningful margin, such as "
+        "small datasets with reliable hard negatives (face verification is "
+        "the classic case). It is rare because InfoNCE gets many negatives "
+        "per anchor for free from the batch, a richer signal at scale, "
+        "while triplet mining is expensive and brittle.",
+    ],
+    3: [
+        "For legal contracts, use hierarchical mother-and-child chunking. "
+        "Clauses are short and precise, which makes good child chunks for "
+        "matching, but interpretation needs the surrounding section, which "
+        "is what the mother chunk hands to the LLM. Fixed-size chunks split "
+        "clauses mid-sentence, and flat semantic chunking loses the "
+        "document structure that legal reasoning relies on.",
+        "Contextual chunking calls an LLM once per chunk at ingestion to "
+        "prepend document-level context, so cost scales linearly with "
+        "corpus size; the quality gain is largest for chunks that are "
+        "ambiguous out of context. Late chunking embeds the whole document "
+        "with a long-context embedder and pools per chunk afterward: no "
+        "LLM calls, far cheaper, but capped by the embedder's context "
+        "window and usually a smaller retrieval gain.",
+        "Split each document into mother chunks (about 1,000 tokens) and "
+        "child chunks (about 250 tokens) that carry a parent pointer. "
+        "Embed and index only the children for precise matching. At query "
+        "time retrieve the top-k children, deduplicate to their mothers, "
+        "and pass the mother chunks to the generator. Evaluate against "
+        "single-level retrieval on the same 100-query set.",
+    ],
+    4: [
+        "Stage 1 sparse + dense union returns about 1,000 candidates (500 "
+        "from each side) in roughly 50 ms. The 64-dim Matryoshka prune "
+        "cuts 1,000 to 200 in a few milliseconds. ColBERT rescores 200 "
+        "down to 50 in about 80 ms, and the cross-encoder rescores 50 to "
+        "a final 10 inside the remaining 60 ms. Validate with recall@5 "
+        "against a dense-only baseline and shrink ColBERT's candidate "
+        "count first if the budget tightens.",
+        "For a medical corpus full of synonyms and abbreviations, SPLADE's "
+        "learned term expansion should close vocabulary gaps that BM25 "
+        "cannot. The experiment: index the corpus both ways, run a "
+        "200-query set with graded judgments, and compare recall@50 and "
+        "NDCG@10 along with index size and query latency. If SPLADE's "
+        "recall gain is under about 2 points, keep BM25 for cheaper, "
+        "simpler serving.",
+        "When the corpus is small enough that full-dimension search "
+        "already meets the latency budget, the prune stage saves nothing. "
+        "Matryoshka also adds nothing when recall is bottlenecked "
+        "elsewhere (bad chunking, embedder-domain mismatch) or when the "
+        "embedder was not trained with the Matryoshka objective, because "
+        "truncated prefixes of such vectors are not meaningful.",
+    ],
+    5: [
+        "Embed images with CLIP's image encoder and text chunks with the "
+        "matching CLIP text encoder, indexed in one vector store with a "
+        "modality tag. A query embeds once into the shared space, "
+        "retrieves top-k from each modality, and a fusion step (RRF or "
+        "score normalization) merges the lists. A multimodal model such "
+        "as BLIP-2 then answers over the retrieved images plus text.",
+        "BLIP-2 wins on high-volume, narrow tasks such as caption-style "
+        "VQA over product photos, where questions are simple and "
+        "self-hosted inference amortizes to a fraction of a cent per "
+        "call. It loses on long-tail reasoning, OCR-heavy images, and "
+        "multi-image instructions, so if accuracy there matters more "
+        "than unit cost, GPT-4V is the better trade.",
+        "Scanned-document search (invoices, forms) is a blocker: CLIP "
+        "cannot reliably read dense text inside images, so retrieval "
+        "fails exactly where the signal lives. Fix: run OCR or a "
+        "document-understanding model at ingestion, index the extracted "
+        "text with a text embedder, and keep CLIP only for layout and "
+        "visual aspects of the query.",
+    ],
+    6: [
+        "Context: you answer questions for Acme employees using only the "
+        "HR policy excerpts provided. Objective: answer accurately and "
+        "cite the policy section. Style: plain language, short "
+        "paragraphs. Tone: professional and neutral. Audience: employees "
+        "with no HR background. Response format: 3 to 5 sentences with a "
+        "citation, or state that the policy does not cover the question. "
+        "The grounding restriction stated inside Context is what keeps "
+        "the bot from improvising policy.",
+        "COPRO mutates only the instruction text, so it costs tens of "
+        "LLM calls but its ceiling is limited because demonstrations "
+        "stay fixed. MIPRO jointly optimizes instructions and "
+        "bootstrapped few-shot demonstrations with a Bayesian search "
+        "over combinations, costing roughly an order of magnitude more "
+        "calls but reaching a higher ceiling, especially where worked "
+        "examples carry most of the signal.",
+        "Build a labeled set of clinical questions and require the model "
+        "to output an answer plus a stated confidence. Bin predictions "
+        "by confidence, plot accuracy per bin against the diagonal, and "
+        "report expected calibration error. For medical use, add a "
+        "selective-accuracy test: find the confidence threshold at which "
+        "abstaining on the rest leaves the answered subset at the "
+        "required accuracy.",
+    ],
+    7: [
+        "Question: 'Which suppliers of the company acquired in 2024 are "
+        "also under investigation?' The answer spans three documents: "
+        "the acquisition, the supplier list, and the investigation "
+        "report. Vector RAG embeds the whole question and misses the "
+        "intermediate hops because no single chunk mentions all the "
+        "entities. GraphRAG extracted the triplets at ingestion, so the "
+        "query walks acquisition to supplier to investigation edges and "
+        "joins the facts.",
+        "RAPTOR ingestion is recursive clustering plus one summary call "
+        "per cluster per level, typically cheaper than GraphRAG's "
+        "per-chunk triplet extraction, entity resolution, and community "
+        "summarization. At query time RAPTOR is usually faster because "
+        "it stays inside one vector index over tree nodes, while "
+        "GraphRAG pays for graph traversal and community lookups but "
+        "answers entity-centric multi-hop questions more precisely.",
+        "Neo4j. At 100M triplets the graph exceeds comfortable in-memory "
+        "operation, and Neo4j's disk-based storage, operations tooling, "
+        "and backup story handle that scale conservatively. Memgraph's "
+        "in-memory design wins on raw traversal latency but makes RAM "
+        "the binding constraint; pick it only if the working set fits "
+        "and sub-10 ms traversals are a hard requirement.",
+    ],
+    8: [
+        "Stage 1 syntax and schema: reject malformed or oversized "
+        "inputs. Stage 2 PII: detect and redact patient identifiers "
+        "with Presidio before anything is logged. Stage 3 safety and "
+        "toxicity: block self-harm and abusive content with a "
+        "classifier. Stage 4 intent and scope: confirm the question is "
+        "about clinical guidelines the system may answer and refuse "
+        "everything else with an escalation path. Each stage early-exits "
+        "with a logged reason code.",
+        "Separate trust levels. Retrieved documents go into a clearly "
+        "delimited context block, and the system prompt instructs the "
+        "model to treat that block as data, never as instructions. A "
+        "lightweight classifier flags imperative, model-directed "
+        "language in retrieved chunks ('ignore previous instructions') "
+        "and quarantines only the flagged span, so legitimate content "
+        "in the same document still flows through. Grounding checks on "
+        "the output catch anything that slips past.",
+        "Retrieval 300 ms (sparse + ANN union), rerank 400 ms "
+        "(cross-encoder over 50 candidates), generation 1,800 ms (the "
+        "dominant term, bounded by max output tokens), verification "
+        "400 ms (NLI grounding over extracted claims), leaving 100 ms "
+        "for network and queuing. Enforce per-stage timeouts with "
+        "degraded fallbacks (skip rerank, shorten output) so one slow "
+        "stage cannot blow the whole budget.",
+    ],
+    9: [
+        "Prompt per contract section: 'Extract 3 to 5 atomic facts from "
+        "this section. Each fact must be one sentence, name parties and "
+        "defined terms explicitly with no pronouns, keep dates, amounts, "
+        "and conditions verbatim, and cite the clause number. Output "
+        "JSON: [{fact, clause}]. Do not infer anything not stated.' "
+        "Atomicity and explicit entity naming are what make factoids "
+        "retrievable.",
+        "Start at cosine similarity 0.92, calibrated on a set of "
+        "paraphrase pairs and near-miss pairs from real tickets. Tune "
+        "so the false-hit rate (different intent served a cached "
+        "answer) stays under about 1 percent, because a wrong cached "
+        "answer costs more than a cache miss. Customer-service traffic "
+        "is repetitive enough that 0.92 still yields a 20 to 30 percent "
+        "hit rate.",
+        "Train an initial embedder and index the corpus. For each "
+        "training query, retrieve the top 50 to 100, drop the gold "
+        "positives, and sample negatives from the middle ranks where "
+        "overlap is high but the label is negative (skip the very top "
+        "to avoid false negatives). Retrain with these hard negatives "
+        "in InfoNCE, re-index, and repeat for 2 to 3 rounds until eval "
+        "recall plateaus.",
+    ],
+    10: [
+        "Use a planner-executor loop: decompose the question into "
+        "sub-queries, retrieve per hop, reflect on whether the evidence "
+        "answers the question, and issue follow-up queries until done "
+        "or a step cap hits. Tools: retriever, entity lookup, and a "
+        "notes scratchpad. The multi-hop gain comes from issuing the "
+        "second-hop query with the first-hop answer in hand, which "
+        "static single-shot retrieval cannot do. Verify on a "
+        "50-question multi-hop set against the static baseline.",
+        "A CTE library is a versioned set of named, tested SQL building "
+        "blocks that encode business definitions, so the Text-to-SQL "
+        "agent composes vetted pieces instead of inventing joins. "
+        "Starter five for finance: active_customers, monthly_revenue "
+        "(recognized revenue by month), arr_by_account, "
+        "churned_accounts (with churn date and reason), and "
+        "ledger_normalized (sign-corrected journal entries). Each CTE "
+        "ships with a docstring, an owner, and a unit test the agent "
+        "can read.",
+        "SFT alone is enough when you have abundant correct (question, "
+        "SQL) pairs in the target dialect and a stable schema; "
+        "supervised learning captures the mapping directly. RL (GRPO "
+        "with execution accuracy as the verifier) helps when labeled "
+        "SQL is scarce but candidates can be executed against the "
+        "database, because execution provides a cheap reward over "
+        "compositions SFT never saw. RL on top of a weak SFT base "
+        "mostly amplifies noise.",
+    ],
+    11: [
+        "Rank 16 with alpha 32 (alpha equal to twice the rank) is the "
+        "standard starting point; Text-to-SQL is narrow, so higher rank "
+        "buys little. Target the attention projections q_proj, k_proj, "
+        "v_proj, and o_proj, adding the MLP projections if eval lags, "
+        "since SQL structure benefits from MLP adaptation. Confirm with "
+        "a rank sweep over {8, 16, 32} scored on execution accuracy.",
+        "Prompts are programming tasks that ship with unit tests. The "
+        "policy samples k candidates per prompt; a sandboxed verifier "
+        "runs the tests and returns pass/fail (or fraction passed) as "
+        "the reward. Train with GRPO: normalize rewards within each "
+        "group of k samples to get advantages, and keep a KL penalty "
+        "against the SFT reference so the policy cannot drift into "
+        "reward hacking.",
+        "DPO needs only static preference pairs and trains with a "
+        "classification-style loss: cheap, stable, no reward model and "
+        "no rollouts, but bounded by the coverage of the pairs. PPO "
+        "needs a trained reward model plus online rollouts, costs far "
+        "more compute, and is sensitive to KL and clipping settings, "
+        "but it keeps improving on-policy and reaches higher ceilings "
+        "when the reward model is good.",
+    ],
+    12: [
+        "For known-item FAQ retrieval, where each query has exactly one "
+        "correct answer, use MRR: it directly measures how high that "
+        "single relevant result ranks. MAP assumes multiple relevant "
+        "documents per query, and NDCG requires graded relevance "
+        "judgments; both add annotation cost without extra signal when "
+        "relevance is binary and singular.",
+        "Position bias: present each pair twice with the order swapped "
+        "and keep only consistent verdicts. Verbosity bias: score "
+        "against a rubric that explicitly excludes length, and "
+        "spot-check with length-matched pairs. Self-preference bias: "
+        "use a judge from a different model family than the systems "
+        "under test. Run at temperature 0, pin model versions, and "
+        "report agreement against a human-labeled subset.",
+        "Grounding verification is the asymmetry in practice: checking "
+        "that an answer is entailed by the retrieved context is far "
+        "cheaper than generating the answer, because generation "
+        "explores a huge space while verification is a short entailment "
+        "check per claim. So spend a fixed small budget verifying every "
+        "response with an NLI model, and reserve expensive regeneration "
+        "for the rare failures the verifier flags.",
+    ],
+}

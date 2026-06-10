@@ -34,8 +34,9 @@ from chapter_16_ethics_frontier import CHAPTER as CH16
 CHAPTERS = [CH01, CH02, CH03, CH04, CH05, CH06, CH07, CH08,
             CH09, CH10, CH11, CH12, CH13, CH14, CH15, CH16]
 
-OUT = "/Users/pkr465/work/AI-Course-Material/AI_ML_GenAI_Textbook/Output"
-DIAGRAMS = "/Users/pkr465/work/AI-Course-Material/AI_ML_GenAI_Textbook/Diagrams"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(_HERE, "..", "Output")
+DIAGRAMS = os.path.join(_HERE, "..", "Diagrams")
 os.makedirs(OUT, exist_ok=True)
 
 TITLE = "Artificial Intelligence, Machine Learning, and Generative AI"

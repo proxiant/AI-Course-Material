@@ -20,8 +20,9 @@ from content_part5 import FINE_TUNING, VECTOR_DB
 from content_part6 import LLMOPS, EVALUATION, MISC
 from content_part7 import SUPPLEMENT
 
-OUT = "/Users/pkr465/work/AI-Course-Material/Interview_Questions_Textbook/Output"
-DIAGRAMS = "/Users/pkr465/work/AI-Course-Material/Interview_Questions_Textbook/Diagrams"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(_HERE, "..", "Output")
+DIAGRAMS = os.path.join(_HERE, "..", "Diagrams")
 os.makedirs(OUT, exist_ok=True)
 
 TITLE = "AI, ML, and Generative AI Interview Questions"

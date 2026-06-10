@@ -1,5 +1,6 @@
 """All RAG bootcamp generators in one file (calls discrete builders)."""
 import os
+import re
 import sys
 from pptx import Presentation
 from pptx.util import Inches, Pt
@@ -11,13 +12,16 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from helpers import (
     new_doc, add_title, add_subtitle, add_h1, add_h2, add_h3, add_body,
     add_bullet, add_numbered, add_code, add_table, add_divider, add_page_break,
+    FOOTER_TEXT,
 )
 from bootcamp_content import (
     WEEKS, slug, START_DATE, DURATION_WEEKS, TUITION, PREREQ,
 )
 from class_notes_deep import DEEP
-from quiz_bank import QUIZZES
-from projects_bank import PROJECTS
+from quiz_bank import QUIZZES, SHORT_ANSWERS
+from projects_bank import PROJECTS, REFERENCE_SOLUTIONS
+from exam_bank import EXAM
+from lab_detail import LAB_DETAIL
 
 ROOT = "/Users/pkr465/work/AI-Course-Material/LLM_and_Enterprise_RAG_Bootcamp"
 COURSE_NAME = "LLM and Enterprise RAG Bootcamp"
@@ -38,7 +42,7 @@ def build_catalogue():
     add_body(doc, f"Duration: {DURATION_WEEKS} weeks")
     add_body(doc, "Format: Hybrid (in-person at Fremont campus, live Zoom, or both)")
     add_body(doc, f"Tuition: {TUITION}")
-    add_body(doc, "Schedule: Saturdays 11 AM PST through 5 PM PST (main session). Monday and Wednesday 7 to 10 PM PST (labs). Tuesday 8:30 to 10 AM PST (summary and quiz).")
+    add_body(doc, "Schedule: Saturdays 11 AM PT through 5 PM PT (main session). Monday and Wednesday 7 to 10 PM PT (labs). Tuesday 8:30 to 10 AM PT (summary and quiz).")
     add_body(doc, "")
 
     add_h1(doc, "Who This Is For")
@@ -84,7 +88,7 @@ def build_catalogue():
     included = [
         "12 main lecture sessions (Saturdays, full day) with morning theory and afternoon labs.",
         "Team rooms with full multimedia setup for in-person teams.",
-        "24 guided lab sessions (Monday and Wednesday evenings) with working code.",
+        "25 guided lab walkthroughs (Monday and Wednesday evening sessions) with starter code and verification checks.",
         "12 weekly quizzes (Tuesday mornings) covering theory and labs.",
         "12 weekly team projects with peer review.",
         "12 weekly research paper reading guides with discussion questions.",
@@ -152,20 +156,20 @@ def build_syllabus():
 
     add_h1(doc, "Weekly Cadence")
     cadence = [
-        ("Saturday 11 AM - 1 PM PST", "Morning theory session"),
-        ("Saturday 1 - 1:30 PM PST", "Lunch (served on-site)"),
-        ("Saturday 1:30 - 4 PM PST", "Afternoon labs and exercises"),
-        ("Saturday 4 - 5 PM PST", "Project presentations"),
-        ("Monday 7 - 10 PM PST", "Guided lab session"),
-        ("Wednesday 7 - 10 PM PST", "Guided lab session"),
-        ("Tuesday 8:30 - 10 AM PST", "Summary and weekly quiz"),
+        ("Saturday 11 AM - 1 PM PT", "Morning theory session"),
+        ("Saturday 1 - 1:30 PM PT", "Lunch (served on-site)"),
+        ("Saturday 1:30 - 4 PM PT", "Afternoon labs and exercises"),
+        ("Saturday 4 - 5 PM PT", "Project presentations"),
+        ("Monday 7 - 10 PM PT", "Guided lab session"),
+        ("Wednesday 7 - 10 PM PT", "Guided lab session"),
+        ("Tuesday 8:30 - 10 AM PT", "Summary and weekly quiz"),
     ]
     add_table(doc, ["When", "What"], cadence, col_widths=[2.4, 4.6])
 
     add_h1(doc, "Grading and Assessment")
     grading = [
         ("Weekly quizzes (12)", "15%", "Multiple choice + short answer, theory and labs"),
-        ("Weekly team projects (12)", "30%", "Take-home, peer reviewed against a rubric"),
+        ("Weekly team projects (12)", "30%", "Take-home, peer reviewed against a rubric. Weeks 1-11 count toward the 30%; the week 12 project is the capstone, graded separately at 25%"),
         ("Lab participation", "15%", "Attendance and submitted artifacts"),
         ("Paper presentations", "10%", "One per student over the cohort"),
         ("Capstone project", "25%", "Code, presentation, peer review"),
@@ -323,6 +327,11 @@ def _bullets(slide, items, left, top, width, height, size=15, color=DARK):
         run.font.color.rgb = color
 
 
+def _slide_footer(prs, s, color=WHITE):
+    _text(s, FOOTER_TEXT, Inches(0.5), prs.slide_height - Inches(0.26),
+          Inches(12.3), Inches(0.22), size=8, color=color, align=PP_ALIGN.CENTER)
+
+
 def _title_slide(prs, week):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     _band(s, NAVY, 0, prs.slide_height)
@@ -330,8 +339,9 @@ def _title_slide(prs, week):
     _text(s, f"Week {week['num']}", Inches(0.6), Inches(2.0), Inches(8), Inches(0.7), size=28, color=ACCENT, bold=True)
     _text(s, week["title"], Inches(0.6), Inches(2.8), Inches(12), Inches(1.4), size=44, color=WHITE, bold=True)
     _text(s, week["tagline"], Inches(0.6), Inches(4.6), Inches(12), Inches(1.0), size=20, color=WHITE)
-    _text(s, week["date"], Inches(0.6), Inches(6.6), Inches(8), Inches(0.4), size=12, color=WHITE)
-    _text(s, f"{COURSE_NAME} | Instructor: {INSTRUCTOR}", Inches(0.6), Inches(7.0), Inches(10), Inches(0.4), size=12, color=WHITE)
+    _text(s, week["date"], Inches(0.6), Inches(6.3), Inches(8), Inches(0.4), size=12, color=WHITE)
+    _text(s, f"{COURSE_NAME} | Instructor: {INSTRUCTOR}", Inches(0.6), Inches(6.7), Inches(10), Inches(0.4), size=12, color=WHITE)
+    _slide_footer(prs, s)
 
 
 def _section_slide(prs, label, title):
@@ -340,6 +350,7 @@ def _section_slide(prs, label, title):
     _band(s, NAVY, Inches(3.0), Inches(0.05))
     _text(s, label, Inches(0.7), Inches(2.4), Inches(8), Inches(0.5), size=16, color=ACCENT, bold=True)
     _text(s, title, Inches(0.7), Inches(2.9), Inches(12), Inches(1.4), size=36, color=NAVY, bold=True)
+    _slide_footer(prs, s, color=NAVY)
 
 
 def _content_slide(prs, header, title, bullets):
@@ -349,6 +360,7 @@ def _content_slide(prs, header, title, bullets):
     _text(s, title, Inches(0.5), Inches(0.7), Inches(12.5), Inches(0.8), size=26, color=NAVY, bold=True)
     _bullets(s, bullets, Inches(0.7), Inches(1.7), Inches(12), Inches(5.6))
     _band(s, NAVY, prs.slide_height - Inches(0.2), Inches(0.2))
+    _slide_footer(prs, s)
 
 
 def _code_slide(prs, header, title, code):
@@ -376,6 +388,7 @@ def _code_slide(prs, header, title, code):
         r.font.size = Pt(13)
         r.font.color.rgb = RGBColor(0xE6, 0xEC, 0xF5)
     _band(s, NAVY, prs.slide_height - Inches(0.2), Inches(0.2))
+    _slide_footer(prs, s)
 
 
 def _closing_slide(prs, week):
@@ -390,7 +403,8 @@ def _closing_slide(prs, week):
               Inches(0.9), Inches(2.0 + i*0.9), Inches(12), Inches(0.7),
               size=12, color=WHITE)
     _text(s, "Quiz Tuesday | Project due next Saturday | Instructor: " + INSTRUCTOR,
-          Inches(0.7), Inches(7.0), Inches(12), Inches(0.4), size=12, color=WHITE)
+          Inches(0.7), Inches(6.8), Inches(12), Inches(0.4), size=12, color=WHITE)
+    _slide_footer(prs, s)
 
 
 def build_slides():
@@ -470,6 +484,16 @@ def build_labs():
             for step in lab["steps"]:
                 add_numbered(doc, step)
 
+            detail = LAB_DETAIL[(n, i)]
+            add_h1(doc, "Starter Code")
+            add_body(doc, "Copy this into the lab workspace and fill in the marked sections.")
+            add_code(doc, detail["starter_code"])
+
+            add_h1(doc, "Verification Checks")
+            add_body(doc, "Run these before submitting. Each check catches a frequent failure.")
+            for chk in detail["checks"]:
+                add_bullet(doc, chk)
+
             add_h1(doc, "Deliverables")
             add_body(doc, lab["deliverables"])
 
@@ -502,10 +526,10 @@ def build_quizzes():
             n = week["num"]
             doc = new_doc()
             qz = QUIZZES[n]
-            suffix = " — Answer Key" if with_answers else ""
+            suffix = ": Answer Key" if with_answers else ""
             add_title(doc, f"Week {n} Quiz{suffix}", size=22)
             add_subtitle(doc, week["title"], size=14)
-            add_subtitle(doc, f"Tuesday 8:30 to 10:00 AM PST | 30 minutes | 60 points | Instructor: {INSTRUCTOR}", size=11)
+            add_subtitle(doc, f"Tuesday 8:30 to 10:00 AM PT | 30 minutes | 60 points | Instructor: {INSTRUCTOR}", size=11)
             add_divider(doc)
 
             add_h1(doc, "Instructions")
@@ -529,7 +553,7 @@ def build_quizzes():
                 if not with_answers:
                     add_body(doc, "(Write 3 to 6 sentences in the space below.)")
                 else:
-                    add_body(doc, "Model answers reviewed live in the Tuesday quiz session.")
+                    add_body(doc, f"Model answer: {SHORT_ANSWERS[n][i-1]}")
 
             fname = f"Week_{n:02d}_Quiz{'_Solution' if with_answers else ''}.docx"
             out = os.path.join(ROOT, "Weekly_Quizzes", fname)
@@ -545,7 +569,7 @@ def build_projects():
             n = week["num"]
             proj = PROJECTS[n]
             doc = new_doc()
-            suffix = " — Reference Solution Sketch" if solution else ""
+            suffix = ": Reference Solution Sketch" if solution else ""
             add_title(doc, f"Week {n} Project Brief{suffix}", size=22)
             add_subtitle(doc, proj["title"], size=14)
             add_subtitle(doc, f"Bootcamp theme: {week['title']} | Due next Saturday | Instructor: {INSTRUCTOR}", size=11)
@@ -575,15 +599,18 @@ def build_projects():
 
             add_h1(doc, "Submission")
             add_bullet(doc, "Push to a private GitHub repo and add the TAs as collaborators.")
-            add_bullet(doc, "Tag the submission commit 'week-XX-submit'.")
-            add_bullet(doc, "Post the repo link in the bootcamp Discord by Saturday 10 AM PST.")
+            add_bullet(doc, f"Tag the submission commit 'week-{n:02d}-submit'.")
+            add_bullet(doc, "Post the repo link in the bootcamp Discord by Saturday 10 AM PT.")
 
             if solution:
+                ref = REFERENCE_SOLUTIONS[n]
                 add_h1(doc, "Reference Solution Sketch")
-                add_body(doc, "A clean reference solution emphasizes honest evaluation over polished UI. Skeletons for each deliverable are in the lab repo branch 'reference-week-XX'.")
+                add_body(doc, ref["approach"])
 
-                add_h2(doc, "Architecture")
-                add_body(doc, f"Built around the patterns introduced in week {n}'s class notes. Follow the recommended defaults; deviate only with measured justification.")
+                add_h2(doc, "Implementation Outline")
+                for step in ref["outline"]:
+                    add_bullet(doc, step)
+                add_body(doc, f"Skeletons for each deliverable are in the lab repo branch 'reference-week-{n:02d}'.")
 
                 add_h2(doc, "Common Failure Modes")
                 add_bullet(doc, "Skipping evaluation rigor in favor of better-looking implementation.")
@@ -718,7 +745,7 @@ SCENARIOS = [
 def build_cert_test():
     for with_answers in (False, True):
         doc = new_doc()
-        suffix = " — Answer Key" if with_answers else ""
+        suffix = ": Answer Key" if with_answers else ""
         add_title(doc, f"PCAP-RAG Final Certification Exam{suffix}", size=22)
         add_subtitle(doc, COURSE_NAME, size=14)
         add_subtitle(doc, f"Duration: 3 hours | Total: 240 points | Pass: 168 (70%) | Instructor: {INSTRUCTOR}", size=11)
@@ -740,7 +767,7 @@ def build_cert_test():
         add_h1(doc, "Part A: Multiple Choice (60 questions)")
         idx = 1
         for week_num in range(1, 13):
-            mcqs = QUIZZES[week_num]["mcq"][:5]
+            mcqs = EXAM[week_num]
             for (q, options, ans, expl) in mcqs:
                 add_h2(doc, f"Q{idx} (Week {week_num}). {q}")
                 for j, opt in enumerate(options):
@@ -754,7 +781,7 @@ def build_cert_test():
 
         add_h1(doc, "Part B: Scenarios (4 questions)")
         for i, s in enumerate(SCENARIOS, 1):
-            add_h2(doc, f"Scenario {i}: {s['title']}")
+            add_h2(doc, f"Scenario {i}: {re.sub(r'^Scenario [A-D]: ', '', s['title'])}")
             add_body(doc, s["prompt"])
             if with_answers:
                 add_body(doc, "Grading rubric (3 points per item):")

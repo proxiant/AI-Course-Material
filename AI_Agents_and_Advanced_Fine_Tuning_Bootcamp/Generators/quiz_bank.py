@@ -223,7 +223,9 @@ QUIZZES = {
               "Preference optimization with reference-free training",
               "RAG and fine-tuning",
               "Inference and training"], 1,
-             "ORPO blends preference learning with SFT-like signal."),
+             "ORPO blends preference learning with an SFT-like signal. ORPO itself "
+             "is a preference fine-tuning method (weights, not prompts); it pairs "
+             "with DPO in Week 6. The prompt-space optimizer covered this week is OPRO."),
         ],
         "short": [
             "Write a CO-STAR prompt for an internal HR FAQ bot.",
@@ -325,8 +327,9 @@ QUIZZES = {
              ["Slow to compute", "High variance",
               "Always wrong", "Requires a reward model"], 1,
              "Variance reduction is the central engineering problem."),
-            ("In GRPO, typical group sizes are:",
-             ["1", "4 to 8", "100", "1000+"], 1, "4-8 in practice."),
+            ("In GRPO, group sizes are commonly:",
+             ["1", "2 to 4", "8 to 64", "1000+"], 2,
+             "Commonly 8 to 64 in practice; DeepSeekMath used a group size of 64."),
             ("DPO's beta parameter controls:",
              ["Learning rate", "How strongly to follow preferences",
               "Batch size", "Reward scaling"], 1,
@@ -503,7 +506,7 @@ QUIZZES = {
         ],
         "short": [
             "Author an Agent Card for a market-research agent that charges $0.20 per task and runs in 30 seconds P95.",
-            "Compare Nanda and Cisco Agency on trust model, governance, and operational fit.",
+            "Compare Nanda and Cisco's AGNTCY initiative on trust model, governance, and operational fit.",
             "Sketch an mTLS rotation strategy that does not require downtime.",
         ],
     },

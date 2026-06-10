@@ -64,6 +64,9 @@ LAB_DETAIL = {
     },
 }
 
+from lab_detail_full import LAB_DETAIL_FULL
+LAB_DETAIL.update(LAB_DETAIL_FULL)
+
 
 def detail_for(n, i):
     return LAB_DETAIL.get((n, i), {
@@ -85,7 +88,7 @@ def build_one(week, lab, idx):
     add_title(doc, f"Week {n} | Lab {chr(65+idx)}", size=22)
     add_subtitle(doc, lab["title"], size=14)
     add_subtitle(doc,
-                 f"Bootcamp week: {week['title']} | Session: {'Tuesday' if idx == 0 else 'Thursday'}",
+                 f"Bootcamp week: {week['title']} | Session: {('Tuesday', 'Thursday', 'Sunday lab block')[min(idx, 2)]}",
                  size=11)
     add_divider(doc)
 
@@ -146,7 +149,7 @@ def safe(t):
             out.append(c)
         elif c in " -_":
             out.append("_")
-    return "".join(out)[:60].strip("_")
+    return "".join(out)[:80].strip("_")
 
 
 if __name__ == "__main__":

@@ -3,380 +3,141 @@ PROXIANT ACADEMY - AI FOR OPERATIONS COURSE
 PowerPoint Presentation Suite Index
 ================================================================================
 
-LOCATION: /sessions/zen-inspiring-dijkstra/mnt/AI Course Material/AI_for_Operations_Course/Slides/
+LOCATION: AI_for_Operations_Course/Slides/
+UPDATED:  February 2026
 
 ================================================================================
-PRESENTATIONS (4 Files)
+PRESENTATIONS (12 Files, 186 Slides)
 ================================================================================
 
-1. CLASS_01_AI_POWERED_OPERATIONS_LANDSCAPE.pptx
-   Size: 197 KB
-   Slides: 10
-   Module: Week 1 - Part 1
-   Topics:
-     • AI/ML Taxonomy for Operations Professionals
-     • Industry Use Cases (Manufacturing, Logistics, Retail, Energy)
-     • ROI Metrics & Business Impact
-     • Cloud Platforms Comparison (AWS, Azure, GCP)
-     • Real-World Case Studies
-     • Python Environment Setup
-   Key Features:
-     • 4-stat ROI callout cards
-     • Cloud platform feature table
-     • Case study challenge/solution/result structure
-     • Python library installation guide
+ 1. Class_01_AI_Powered_Operations_Landscape.pptx
+    Title: The AI-Powered Operations Landscape
+    Slides: 10 | Size: 196 KB | Week 1
+    Topics: AI/ML taxonomy, industry use cases, ROI metrics, cloud
+    platforms (AWS/Azure/GCP), case studies, Python environment setup
 
-2. CLASS_02_OPERATIONAL_DATA_ENGINEERING.pptx
-   Size: 222 KB
-   Slides: 11
-   Module: Week 1 - Part 2
-   Topics:
-     • IoT Sensor Data Types & Characteristics
-     • Data Pipeline Architecture
-     • ERP/WMS/TMS System Integration
-     • Time-Series Databases (InfluxDB vs TimescaleDB)
-     • Data Quality & Preprocessing
-     • Feature Engineering for Operations
-     • Hands-On Lab: Kafka Pipeline
-   Key Features:
-     • Sensor data comparison table
-     • MQTT → Kafka → Flink flow diagram
-     • System integration details (3 columns)
-     • Python Kafka producer code example
-     • Data quality issues + solutions
+ 2. Class_02_Operational_Data_Engineering.pptx
+    Title: Operational Data Engineering & Analytics
+    Slides: 11 | Size: 221 KB | Week 1
+    Topics: IoT sensor data, pipeline architecture (MQTT/Kafka/Flink),
+    ERP/WMS/TMS integration, InfluxDB vs TimescaleDB, data quality,
+    feature engineering, Kafka lab
 
-3. CLASS_03_DEMAND_FORECASTING_ML.pptx
-   Size: 199 KB
-   Slides: 11
-   Module: Week 2 - Part 1
-   Topics:
-     • Statistical Baselines (ARIMA, ETS, Prophet)
-     • Machine Learning Models (XGBoost, LightGBM)
-     • Deep Learning Architectures (LSTM, N-BEATS, TFT)
-     • Hierarchical Forecasting & MinT Reconciliation
-     • Probabilistic Forecasting & Risk-Aware Planning
-     • Model Evaluation Metrics (MAPE, RMSSE, WAPE)
-     • Hands-On Lab: XGBoost Forecaster
-   Key Features:
-     • Model comparison tables with specifications
-     • Hierarchical forecasting pyramid diagram
-     • Quantile distribution visualization
-     • Formula boxes for accuracy metrics
-     • Step-by-step lab procedures
+ 3. Class_03_Demand_Forecasting_ML.pptx
+    Title: Demand Forecasting with Machine Learning
+    Slides: 11 | Size: 198 KB | Week 2
+    Topics: ARIMA/ETS/Prophet baselines, XGBoost and LightGBM, LSTM and
+    N-BEATS, hierarchical forecasting, probabilistic forecasts,
+    evaluation metrics (MAPE, RMSSE, WAPE), XGBoost lab
 
-4. CLASS_04_SUPPLY_CHAIN_OPTIMIZATION.pptx
-   Size: 203 KB
-   Slides: 10
-   Module: Week 2 - Part 2
-   Topics:
-     • Network Design: Facility Location Problem
-     • Inventory Optimization Framework
-     • Supplier Selection: Multi-Criteria & TCO
-     • Bullwhip Effect: Causes & AI Solutions
-     • Sustainability & ESG Integration
-     • Hands-On Lab: Multi-Echelon Optimization
-   Key Features:
-     • Network topology diagram (DCs + customers)
-     • Strategic/Tactical/Operational hierarchy
-     • Supplier selection scoring table
-     • Bullwhip effect demand amplification visualization
-     • PuLP optimization code example
+ 4. Class_04_Supply_Chain_Optimization.pptx
+    Title: Supply Chain Optimization
+    Slides: 10 | Size: 202 KB | Week 2
+    Topics: facility location, inventory optimization, supplier
+    selection and TCO, bullwhip effect, sustainability/ESG, PuLP lab
 
-================================================================================
-DOCUMENTATION FILES
-================================================================================
+ 5. Class_05_Route_Optimization_Fleet_Management.pptx
+    Title: Route Optimization & Fleet Management
+    Slides: 18 | Size: 282 KB | Week 3
+    Topics: VRP variants, Google OR-Tools, time windows, dynamic
+    routing, fleet maintenance scheduling, last-mile delivery, VRP lab
 
-README.md
-  • Overview of all 4 presentations
-  • Design standards & branding guidelines
-  • Technology stack summary
-  • How-to-use instructions for instructors/students
-  • Compatibility information
+ 6. Class_06_Warehouse_Automation.pptx
+    Title: Warehouse Automation & Robotics
+    Slides: 18 | Size: 294 KB | Week 3
+    Topics: layout design, pick-path algorithms, slotting, robotic
+    picking, computer vision for inspection, digital twins, pick-path lab
 
-INDEX.txt (this file)
-  • Complete file inventory
-  • Slide-by-slide content summary
-  • Quick reference guide
-  • Search/navigation index
+ 7. Class_07_Predictive_Maintenance.pptx
+    Title: Predictive Maintenance with AI
+    Slides: 18 | Size: 303 KB | Week 4
+    Topics: condition monitoring, vibration analysis, RUL prediction,
+    survival analysis, anomaly detection, maintenance optimization, RUL lab
+
+ 8. Class_08_Quality_Control_AI.pptx
+    Title: AI-Powered Quality Control
+    Slides: 18 | Size: 307 KB | Week 4
+    Topics: SPC with ML, computer vision defect detection (YOLO,
+    ResNet), root cause analysis, Six Sigma integration, defect lab
+
+ 9. Class_09_Process_Mining_Optimization.pptx
+    Title: Process Mining & Optimization
+    Slides: 18 | Size: 239 KB | Week 5
+    Topics: event logs, PM4Py discovery, bottleneck identification,
+    SimPy discrete event simulation, digital twins, process mining lab
+
+10. Class_10_Resource_Allocation_Scheduling.pptx
+    Title: Resource Allocation & Scheduling
+    Slides: 18 | Size: 240 KB | Week 5
+    Topics: job shop scheduling, CP-SAT constraint programming,
+    workforce optimization, capacity planning, energy cost, scheduler lab
+
+11. Class_11_MLOps_for_Operations.pptx
+    Title: MLOps for Operations
+    Slides: 18 | Size: 241 KB | Week 6
+    Topics: edge deployment with TensorFlow Lite, model and data drift
+    monitoring, real-time inference, A/B testing, dashboards, TFLite lab
+
+12. Class_12_Capstone_Certification_Review.pptx
+    Title: Capstone Presentations & Certification Review
+    Slides: 18 | Size: 59 KB | Week 6
+    Topics: capstone guidelines and rubric, presentation format, peer
+    review, certification overview, course synthesis, career pathways
 
 ================================================================================
-SLIDE-BY-SLIDE REFERENCE
+CERTIFICATION
 ================================================================================
 
-CLASS 01: AI_POWERED_OPERATIONS_LANDSCAPE
-
-Slide 1:   Title Slide
-Slide 2:   Course Agenda (6 topics)
-Slide 3:   AI/ML Taxonomy (3 learning paradigms)
-Slide 4:   Industry Use Cases (4 industries)
-Slide 5:   ROI Metrics Callout (4 stat cards)
-Slide 6:   Cloud Platforms (AWS/Azure/GCP)
-Slide 7:   Case Studies (Amazon, UPS, Siemens)
-Slide 8:   Python Environment Setup (6 libraries)
-Slide 9:   Key Takeaways (5 points)
-Slide 10:  Q&A Closing
-
-───────────────────────────────────────────────────────────────────────────────
-
-CLASS 02: OPERATIONAL_DATA_ENGINEERING
-
-Slide 1:   Title Slide
-Slide 2:   Module Agenda (7 topics)
-Slide 3:   IoT Sensor Types (4x table: Vibration/Temp/Pressure/Flow)
-Slide 4:   Pipeline Architecture (MQTT → Kafka → Flink → Data Lake)
-Slide 5:   ERP/WMS/TMS Integration (3-column: SAP/Oracle/Manhattan)
-Slide 6:   Time-Series DB Comparison (InfluxDB vs TimescaleDB)
-Slide 7:   Data Quality Issues (4 problems + solutions)
-Slide 8:   Feature Engineering (5 categories with examples)
-Slide 9:   Hands-On Lab (Python Kafka producer code)
-Slide 10:  Key Takeaways (6 points)
-Slide 11:  Q&A Closing
-
-───────────────────────────────────────────────────────────────────────────────
-
-CLASS 03: DEMAND_FORECASTING_ML
-
-Slide 1:   Title Slide
-Slide 2:   Module Agenda (7 topics)
-Slide 3:   Statistical Baselines (ARIMA, ETS, Prophet)
-Slide 4:   ML Model Comparison (XGBoost vs LightGBM)
-Slide 5:   Deep Learning Architectures (LSTM, N-BEATS, TFT)
-Slide 6:   Hierarchical Forecasting (Pyramid + 3 methods)
-Slide 7:   Probabilistic Forecasting (Quantiles + risk applications)
-Slide 8:   Evaluation Metrics (MAPE, RMSSE, WAPE formulas)
-Slide 9:   Hands-On Lab (XGBoost implementation + code)
-Slide 10:  Key Takeaways (6 points)
-Slide 11:  Q&A Closing
-
-───────────────────────────────────────────────────────────────────────────────
-
-CLASS 04: SUPPLY_CHAIN_OPTIMIZATION
-
-Slide 1:   Title Slide
-Slide 2:   Module Agenda (6 topics)
-Slide 3:   Facility Location (Network diagram + approaches)
-Slide 4:   Inventory Framework (Strategic/Tactical/Operational)
-Slide 5:   Supplier Selection (Multi-criteria scoring table)
-Slide 6:   Bullwhip Effect (Amplification chart + causes + solutions)
-Slide 7:   Sustainability & ESG (3 dimensions with ML applications)
-Slide 8:   Hands-On Lab (PuLP multi-echelon formulation + code)
-Slide 9:   Key Takeaways (6 points)
-Slide 10:  Q&A Closing
-
-================================================================================
-CONTENT QUICK REFERENCE
-================================================================================
-
-AI/ML Tools Covered:
-  Cloud Platforms: AWS (IoT Core, SageMaker), Azure (IoT Hub, ML), GCP (Vertex AI)
-  Data Processing: Kafka, Flink, Spark
-  Time-Series: InfluxDB, TimescaleDB
-  ML Libraries: scikit-learn, TensorFlow, XGBoost, LightGBM, Prophet
-  Optimization: OR-Tools, PuLP, Gurobi
-  Enterprise: SAP, Oracle, Manhattan Associates WMS
-
-Real Case Studies:
-  • Amazon Warehouse Robotics - 50% faster fulfillment
-  • UPS ORION Routing - 100M miles saved annually
-  • Siemens Predictive Maintenance - 25% failure reduction
-
-Industry Applications:
-  Manufacturing:  Predictive maintenance, quality control, scheduling
-  Logistics:      Route optimization, real-time tracking
-  Retail:         Demand forecasting, inventory management
-  Energy:         Grid optimization, load forecasting
-  Supply Chain:   Facility location, supplier selection, ESG
-
-Code Examples Included:
-  1. Python Kafka Producer (sensor data streaming)
-  2. XGBoost Forecaster (demand prediction)
-  3. PuLP Optimization (multi-echelon inventory)
-  4. pip Installation Commands
+Final certification test (included): 60 questions, 90 minutes, 70% to pass.
+Graduates also qualify to sit the PCAP exam (100 MCQ, 3 hours, $199,
+valid 3 years). See Class 12 for structure and preparation.
 
 ================================================================================
 DESIGN SPECIFICATIONS
 ================================================================================
 
-Colors (No # prefix):
+Colors:
   Primary Navy:   1B365D
   Secondary Teal: 2E86AB
   Accent Green:   4CAF50
   Footer Gray:    999999
-  Light Gray:     E8E8E8
-  Dark Text:      333333
-  White:          FFFFFF
-  Code BG:        2B2B2B
-  Code Text:      00FF00
 
 Fonts:
-  Titles:    Georgia (bold, 28-44pt)
-  Body:      Calibri (9-13pt)
-  Code:      Courier New (7-10pt)
+  Titles:  Georgia (bold, 28-44pt)
+  Body:    Calibri (9-13pt)
+  Code:    Courier New (7-10pt)
 
 Layout:
-  Format:    16:9 widescreen (10" × 5.625")
-  Title:     Navy background
-  Content:   White with teal header bar
-  Closing:   Navy background
-
-Elements:
-  Shapes:    Rectangles, ellipses, lines
-  Tables:    Multi-column with alternating rows
-  Diagrams:  Process flows, network topologies, hierarchies
-  Callouts:  Formula boxes, code blocks, stat cards
+  Format:   16:9 widescreen
+  Title:    Navy background
+  Content:  White with teal header bar
+  Closing:  Navy background
 
 ================================================================================
-HOW TO FIND CONTENT
-================================================================================
-
-To Find Topics by Class:
-
-AI/ML Fundamentals:           Class 01, Slide 3
-Industry Applications:         Class 01, Slide 4
-Cloud Platform Selection:      Class 01, Slide 6
-ROI Metrics:                   Class 01, Slide 5
-
-IoT Data Architecture:         Class 02, Slide 4
-ERP Integration:               Class 02, Slide 5
-Data Quality:                  Class 02, Slide 7
-Feature Engineering:           Class 02, Slide 8
-
-Statistical Forecasting:       Class 03, Slide 3
-ML Forecasting:                Class 03, Slide 4
-Deep Learning Models:          Class 03, Slide 5
-Forecast Evaluation:           Class 03, Slide 8
-
-Facility Location:             Class 04, Slide 3
-Inventory Optimization:        Class 04, Slide 4
-Supplier Management:           Class 04, Slide 5
-Sustainability:                Class 04, Slide 7
-
-================================================================================
-USAGE GUIDE
+USAGE
 ================================================================================
 
 Opening Files:
-  • PowerPoint 2016+: Direct open
-  • Google Slides: File → Open → Upload .pptx
-  • LibreOffice: File → Open
-  • Online: Upload to PowerPoint Online
+  PowerPoint 2016+, Google Slides (import), LibreOffice, Office 365
 
 Classroom Use:
-  • Present slides for live instruction
-  • Pause at lab slides for hands-on exercises
-  • Use code examples for live demos
-  • Reference case studies for discussions
+  Present for live instruction; pause at lab slides for hands-on work;
+  use code examples for live demos; reference case studies in discussion.
 
 Self-Paced Learning:
-  • Follow slides sequentially
-  • Use code examples as templates
-  • Complete lab exercises independently
-  • Review key takeaways before assessments
-
-Printing:
-  • Use "3 slides per page" layout for handouts
-  • Print speaker notes for instructor use
-  • Maintain color printing for visual appeal
-
-Customization:
-  • Update company name/colors as needed
-  • Add speaker notes in PowerPoint
-  • Modify code examples for local environment
-  • Extend labs with additional exercises
+  Follow slides in order; use code examples as templates; review key
+  takeaways before assessments.
 
 ================================================================================
-TECHNICAL DETAILS
-================================================================================
-
-File Format:  Microsoft Office Open XML (.pptx)
-Compatibility:  PowerPoint 2016+, Google Slides, LibreOffice, Office 365
-File Sizes:
-  Class 01: 197 KB
-  Class 02: 222 KB
-  Class 03: 199 KB
-  Class 04: 203 KB
-  Total: 821 KB
-
-Slide Counts:
-  Class 01: 10 slides
-  Class 02: 11 slides
-  Class 03: 11 slides
-  Class 04: 10 slides
-  Total: 42 slides
-
-Generation Method:  Node.js with pptxgenjs library
-Code Lines:  2,398 lines across 3 generator scripts
-Memory:      Fresh instances per file, no object reuse
-
-================================================================================
-QUALITY ASSURANCE
-================================================================================
-
-Code Quality:
-  ✓ No deprecated syntax
-  ✓ Proper API usage
-  ✓ Error-free execution
-  ✓ Memory efficient
-
-Visual Quality:
-  ✓ Professional design
-  ✓ Consistent branding
-  ✓ Readable fonts (min 8pt)
-  ✓ Proper color contrast
-
-Content Quality:
-  ✓ Accurate technical information
-  ✓ Real tool names & current versions
-  ✓ Verified case study data
-  ✓ Working code examples
-
-Accessibility:
-  ✓ High contrast colors
-  ✓ Large readable fonts
-  ✓ Clear structure & hierarchy
-  ✓ Logical navigation
-
-================================================================================
-SUPPORT & NOTES
-================================================================================
-
-For Instructors:
-  • Review all slides before first delivery
-  • Prepare code examples for your environment
-  • Collect student feedback for improvements
-  • Update case studies with recent examples
-
-For Students:
-  • Download all 4 presentations before class
-  • Follow along actively during instruction
-  • Complete lab exercises hands-on
-  • Review key takeaways after each module
-
-For Professionals:
-  • Use as reference for operations AI
-  • Implement tools/frameworks shown
-  • Adapt methodologies to your domain
-  • Reference case studies for ROI justification
-
-Troubleshooting:
-  • If slides won't open: Ensure PowerPoint 2016+
-  • If colors look wrong: Check color profile
-  • If fonts missing: Install Georgia/Calibri
-  • If code won't run: Verify library versions
-
-================================================================================
-CONTACT & UPDATES
+CONTACT
 ================================================================================
 
 Organization: Proxiant Academy
-Website:     www.proxiant.com
-Tagline:     Master AI. Professionally.
+Website:      proxiant.ai
+Email:        info@proxiant.com
+Tagline:      Master AI. Professionally.
 
-For questions or updates, contact Proxiant Academy directly.
-
-Generated: February 14, 2026
-Format: Office Open XML (.pptx)
-Status: Ready for Production
+(c) 2026 Proxiant Academy
 
 ================================================================================
 END OF INDEX

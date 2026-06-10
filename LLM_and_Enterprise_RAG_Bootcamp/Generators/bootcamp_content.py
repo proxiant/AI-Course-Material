@@ -1,10 +1,10 @@
 """
 Master content map for LLM and Enterprise RAG Bootcamp.
-12 weeks. Saturdays = main session (11 AM - 5 PM PST). Mon/Wed = labs. Tue = quiz.
+12 weeks. Saturdays = main session (11 AM - 5 PM PT). Mon/Wed = labs. Tue = quiz.
 Style rules (project CLAUDE.md): no em dashes, no AI cliches, plain declarative prose.
 """
 
-START_DATE = "Saturday, June 6, 2026"
+START_DATE = "Saturday, October 3, 2026"
 DURATION_WEEKS = 12
 TUITION = "$3,700 (or $3,600 if paid by check or Zelle upfront)"
 
@@ -15,7 +15,7 @@ PREREQ = ("Working Python (3.10+), comfort with NumPy and PyTorch basics, "
 WEEKS = [
     {
         "num": 1,
-        "date": "Saturday, June 6, 2026",
+        "date": "Saturday, October 3, 2026",
         "title": "Introduction to Language Models",
         "tagline": "From keyword search to semantic understanding",
         "summary": (
@@ -95,7 +95,7 @@ WEEKS = [
     },
     {
         "num": 2,
-        "date": "Saturday, June 13, 2026",
+        "date": "Saturday, October 10, 2026",
         "title": "High-Dimensional Geometry",
         "tagline": "BERT, contrastive loss, anisotropy, and the math of embeddings",
         "summary": (
@@ -173,7 +173,7 @@ WEEKS = [
     },
     {
         "num": 3,
-        "date": "Saturday, June 20, 2026",
+        "date": "Saturday, October 17, 2026",
         "title": "Retrieval",
         "tagline": "Enterprise RAG foundations, chunking, and hierarchical retrieval",
         "summary": (
@@ -251,7 +251,7 @@ WEEKS = [
     },
     {
         "num": 4,
-        "date": "Saturday, June 27, 2026",
+        "date": "Saturday, October 24, 2026",
         "title": "Retrieval Funnel",
         "tagline": "Sparse + dense, Matryoshka, ColBERT, and cross-encoder fusion",
         "summary": (
@@ -334,7 +334,7 @@ WEEKS = [
     },
     {
         "num": 5,
-        "date": "Saturday, July 4, 2026",
+        "date": "Saturday, October 31, 2026",
         "title": "Vision",
         "tagline": "CNNs, Vision Transformers, CLIP, and BLIP",
         "summary": (
@@ -427,7 +427,7 @@ WEEKS = [
     },
     {
         "num": 6,
-        "date": "Saturday, July 11, 2026",
+        "date": "Saturday, November 7, 2026",
         "title": "Prompts",
         "tagline": "CO-STAR, DSPy, GEPA, TextGrad, ORPO",
         "summary": (
@@ -510,7 +510,7 @@ WEEKS = [
     },
     {
         "num": 7,
-        "date": "Saturday, July 18, 2026",
+        "date": "Saturday, November 14, 2026",
         "title": "Graph-Based Retrieval",
         "tagline": "RAPTOR, GraphRAG, LightRAG, and graph databases",
         "summary": (
@@ -595,7 +595,7 @@ WEEKS = [
     },
     {
         "num": 8,
-        "date": "Saturday, July 25, 2026",
+        "date": "Saturday, November 21, 2026",
         "title": "Overcoming RAG Challenges",
         "tagline": "Guardrails, grounding, NLI verification, P95 latency",
         "summary": (
@@ -677,7 +677,7 @@ WEEKS = [
     },
     {
         "num": 9,
-        "date": "Saturday, August 1, 2026",
+        "date": "Saturday, November 28, 2026",
         "title": "Towards Enterprise RAG",
         "tagline": "Derivative artifacts, query transformation, semantic cache",
         "summary": (
@@ -757,7 +757,7 @@ WEEKS = [
     },
     {
         "num": 10,
-        "date": "Saturday, August 8, 2026",
+        "date": "Saturday, December 5, 2026",
         "title": "Agentic RAG and Text2SQL",
         "tagline": "Agent lifecycles, MCP, and SQL generation in production",
         "summary": (
@@ -838,7 +838,7 @@ WEEKS = [
     },
     {
         "num": 11,
-        "date": "Saturday, August 15, 2026",
+        "date": "Saturday, December 12, 2026",
         "title": "Fine-Tuning",
         "tagline": "Chinchilla, PEFT/LoRA, RLHF, and RL with verifiable rewards",
         "summary": (
@@ -922,7 +922,7 @@ WEEKS = [
     },
     {
         "num": 12,
-        "date": "Saturday, August 22, 2026",
+        "date": "Saturday, December 19, 2026",
         "title": "Evals",
         "tagline": "Retrieval metrics, Ragas, LLM-as-judge, and verification asymmetry",
         "summary": (

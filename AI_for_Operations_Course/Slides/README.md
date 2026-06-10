@@ -1,100 +1,59 @@
-# Proxiant Academy - AI for Operations Course
+# Proxiant Academy | AI for Operations Course
 ## PowerPoint Presentation Suite
 
-**Generated:** February 14, 2026  
-**Format:** 4 Professional PowerPoint Presentations (.pptx)  
-**Total Slides:** 42  
-**Total Size:** 821 KB
+**Updated:** February 2026
+**Format:** 12 PowerPoint presentations (.pptx)
+**Total Slides:** 186
+**Total Size:** ~2.7 MB
 
 ---
 
 ## File Inventory
 
-| File | Slides | Size | Module | Focus |
-|------|--------|------|--------|-------|
-| Class_01_AI_Powered_Operations_Landscape.pptx | 10 | 197 KB | Week 1.1 | AI/ML Taxonomy, Use Cases, Cloud Platforms |
-| Class_02_Operational_Data_Engineering.pptx | 11 | 222 KB | Week 1.2 | IoT Data, Pipeline Architecture, Time-Series DB |
-| Class_03_Demand_Forecasting_ML.pptx | 11 | 199 KB | Week 2.1 | ARIMA, XGBoost, LSTM, Hierarchical Forecasting |
-| Class_04_Supply_Chain_Optimization.pptx | 10 | 203 KB | Week 2.2 | Facility Location, Inventory, Supplier Selection |
+| File | Slides | Size | Week | Focus |
+|------|--------|------|------|-------|
+| Class_01_AI_Powered_Operations_Landscape.pptx | 10 | 196 KB | 1 | AI/ML taxonomy, use cases, cloud platforms, ROI |
+| Class_02_Operational_Data_Engineering.pptx | 11 | 221 KB | 1 | IoT data, pipeline architecture, time-series databases |
+| Class_03_Demand_Forecasting_ML.pptx | 11 | 198 KB | 2 | ARIMA, XGBoost, LSTM, hierarchical forecasting |
+| Class_04_Supply_Chain_Optimization.pptx | 10 | 202 KB | 2 | Facility location, inventory, supplier selection |
+| Class_05_Route_Optimization_Fleet_Management.pptx | 18 | 282 KB | 3 | VRP with OR-Tools, time windows, fleet management |
+| Class_06_Warehouse_Automation.pptx | 18 | 294 KB | 3 | Pick paths, slotting, robotics, warehouse vision |
+| Class_07_Predictive_Maintenance.pptx | 18 | 303 KB | 4 | Condition monitoring, survival analysis, RUL models |
+| Class_08_Quality_Control_AI.pptx | 18 | 307 KB | 4 | SPC, defect detection with ResNet, causal analysis |
+| Class_09_Process_Mining_Optimization.pptx | 18 | 239 KB | 5 | Event logs, PM4Py discovery, SimPy simulation |
+| Class_10_Resource_Allocation_Scheduling.pptx | 18 | 240 KB | 5 | Job shop scheduling, CP-SAT, workforce and energy |
+| Class_11_MLOps_for_Operations.pptx | 18 | 241 KB | 6 | Edge deployment (TFLite), drift monitoring, A/B tests |
+| Class_12_Capstone_Certification_Review.pptx | 18 | 59 KB | 6 | Capstone guidance, certification review, careers |
 
 ---
 
-## Presentation Summaries
+## Presentation Titles
 
-### Class 01: The AI-Powered Operations Landscape
-**Week 1 | Module 1**
-
-Introduces AI/ML applications in operations with focus on ROI and cloud platform selection.
-
-**Key Slides:**
-- AI/ML Taxonomy (Supervised, Unsupervised, Reinforcement)
-- Industry Use Cases (Manufacturing, Logistics, Retail, Energy)
-- ROI Metrics (15-50% improvements across OEE, Inventory, Delivery, Quality)
-- Cloud Platforms (AWS SageMaker, Azure ML, GCP Vertex AI)
-- Real Case Studies (Amazon Robotics, UPS ORION, Siemens Maintenance)
-- Python Setup (scikit-learn, TensorFlow, OR-Tools)
-
-**Tools Covered:** AWS IoT, Azure IoT Hub, GCP IoT Core, Python 3.9+
+1. Class 01: The AI-Powered Operations Landscape
+2. Class 02: Operational Data Engineering & Analytics
+3. Class 03: Demand Forecasting with Machine Learning
+4. Class 04: Supply Chain Optimization
+5. Class 05: Route Optimization & Fleet Management
+6. Class 06: Warehouse Automation & Robotics
+7. Class 07: Predictive Maintenance with AI
+8. Class 08: AI-Powered Quality Control
+9. Class 09: Process Mining & Optimization
+10. Class 10: Resource Allocation & Scheduling
+11. Class 11: MLOps for Operations
+12. Class 12: Capstone Presentations & Certification Review
 
 ---
 
-### Class 02: Operational Data Engineering & Analytics
-**Week 1 | Module 2**
+## Certification
 
-Deep dive into data infrastructure, IoT sensor integration, and feature engineering.
-
-**Key Slides:**
-- IoT Sensor Types (Vibration, Temperature, Pressure, Flow)
-- Data Pipeline (MQTT → Kafka → Flink → Data Lake)
-- ERP/WMS/TMS Integration (SAP, Oracle, Manhattan Associates APIs)
-- Time-Series Databases (InfluxDB vs TimescaleDB)
-- Data Quality (Sensor drift, missing values, outliers)
-- Feature Engineering (Rolling aggregates, lag features, Fourier transforms)
-- Lab: Kafka Producer → InfluxDB → Grafana
-
-**Tools Covered:** MQTT, Kafka, Flink, Spark, InfluxDB, TimescaleDB, Grafana
-
----
-
-### Class 03: Demand Forecasting with Machine Learning
-**Week 2 | Module 3**
-
-Comprehensive coverage of forecasting methodologies from statistical to deep learning.
-
-**Key Slides:**
-- Statistical Baselines (ARIMA, ETS, Prophet)
-- ML Models (XGBoost, LightGBM comparison)
-- Deep Learning (LSTM, N-BEATS, Temporal Fusion Transformer)
-- Hierarchical Forecasting (Top-down, Bottom-up, MinT reconciliation)
-- Probabilistic Forecasting (Quantile regression, prediction intervals)
-- Evaluation Metrics (MAPE, RMSSE, WAPE, Bias detection)
-- Lab: Multi-product XGBoost forecaster
-
-**Tools Covered:** statsmodels, fbprophet, XGBoost, LightGBM, TensorFlow, Keras
-
----
-
-### Class 04: Supply Chain Optimization
-**Week 2 | Module 4**
-
-End-to-end supply chain optimization from network design to sustainability.
-
-**Key Slides:**
-- Facility Location (P-median, P-center, Mixed-integer programming)
-- Inventory Optimization (EOQ, Safety stock, Multi-echelon)
-- Supplier Selection (Multi-criteria scoring, TCO models)
-- Bullwhip Effect (Causes, VMI, CPFR solutions)
-- Sustainability & ESG (Carbon optimization, circular supply chains)
-- Lab: Multi-echelon inventory optimization with PuLP
-
-**Tools Covered:** PuLP, Gurobi, OR-Tools, Google Optimization Tools
+The course includes a final certification test: 60 questions, 90 minutes, 70% to pass. Graduates also qualify to sit the PCAP exam (100 MCQ, 3 hours, $199, valid 3 years). Class 12 covers exam structure and preparation.
 
 ---
 
 ## Design Standards
 
 ### Branding
-- **Company:** Proxiant Academy (Proxiant AI)
+- **Company:** Proxiant Academy
 - **Primary Color:** Navy (#1B365D)
 - **Secondary Color:** Teal (#2E86AB)
 - **Accent Color:** Green (#4CAF50)
@@ -107,64 +66,26 @@ End-to-end supply chain optimization from network design to sustainability.
 - **Code:** Courier New (7-10pt)
 
 ### Layout
-- **Format:** 16:9 widescreen (10" × 5.625")
+- **Format:** 16:9 widescreen
 - **Title Slides:** Navy background
 - **Content Slides:** White background with teal header bar
-- **Closing Slides:** Navy background with website/tagline
-
-### Visual Elements
-- Color-coded information boxes
-- Process flow diagrams with arrows
-- Comparison tables with alternating rows
-- Code blocks (dark background, green text)
-- Stat callouts and metric cards
-- Hierarchy/network diagrams
-
----
-
-## Content Highlights
-
-### Practical Focus
-- Real working code examples (Python, PuLP)
-- Step-by-step lab procedures
-- Industry case studies with quantified results
-- Tool-specific configurations
-
-### Technologies Referenced
-**Cloud:** AWS, Azure, GCP  
-**Data:** Kafka, MQTT, Flink, Spark, InfluxDB, TimescaleDB, Grafana  
-**ML:** scikit-learn, TensorFlow, XGBoost, LightGBM, Statsmodels  
-**Optimization:** OR-Tools, PuLP, Gurobi  
-**Enterprise:** SAP, Oracle, Manhattan Associates
-
-### Industry Coverage
-- Manufacturing (Predictive Maintenance, Quality Control)
-- Logistics (Route Optimization, Tracking)
-- Retail (Demand Forecasting, Inventory)
-- Energy (Grid Optimization, Load Forecasting)
-- Supply Chain (Facility Location, Supplier Selection)
+- **Closing Slides:** Navy background with website and tagline
 
 ---
 
 ## How to Use
 
 ### For Instructors
-1. Open presentation in PowerPoint, Google Slides, or LibreOffice
-2. Review speaker notes (edit slide notes in PowerPoint)
+1. Open in PowerPoint, Google Slides, or LibreOffice
+2. Review speaker notes before delivery
 3. Adapt code examples for live demos
-4. Assign labs to students with provided step-by-step guides
+4. Pause at lab slides for hands-on exercises
 
 ### For Students
-1. Use for self-paced learning
+1. Download the deck before each class
 2. Follow along during live instruction
 3. Reference code examples in assignments
 4. Review key takeaways before assessments
-
-### For Professionals
-1. Quick reference for operations AI concepts
-2. Architecture and tool recommendations
-3. Real-world case study examples
-4. ROI calculation frameworks
 
 ---
 
@@ -177,16 +98,8 @@ End-to-end supply chain optimization from network design to sustainability.
 
 ---
 
-## Notes
-
-- Each presentation is self-contained and independent
-- Content sequence: Landscape → Data Engineering → Forecasting → Optimization
-- All code examples use documented, industry-standard libraries
-- Slides support both projection and printed handouts
-- Professional design suitable for enterprise delivery
-
----
-
-**For questions or updates:** contact@proxiant.com  
-**Website:** www.proxiant.com  
+**Questions:** info@proxiant.com
+**Website:** proxiant.ai
 **Tagline:** Master AI. Professionally.
+
+(c) 2026 Proxiant Academy
