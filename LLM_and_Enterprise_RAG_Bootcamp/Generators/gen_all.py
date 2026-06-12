@@ -40,7 +40,7 @@ def build_catalogue():
 
     add_body(doc, f"Start date: {START_DATE}")
     add_body(doc, f"Duration: {DURATION_WEEKS} weeks")
-    add_body(doc, "Format: Hybrid (in-person at Fremont campus, live Zoom, or both)")
+    add_body(doc, "Format: Hybrid (in-person at Frisco campus, live Zoom, or both)")
     add_body(doc, f"Tuition: {TUITION}")
     add_body(doc, "Schedule: Saturdays 11 AM PT through 5 PM PT (main session). Monday and Wednesday 7 to 10 PM PT (labs). Tuesday 8:30 to 10 AM PT (summary and quiz).")
     add_body(doc, "")
@@ -92,7 +92,7 @@ def build_catalogue():
         "12 weekly quizzes (Tuesday mornings) covering theory and labs.",
         "12 weekly team projects with peer review.",
         "12 weekly research paper reading guides with discussion questions.",
-        "Access to the Proxiant Datacenter: 20+ GPU servers, 40+ NVIDIA GPUs (RTX PRO 6000 Blackwell, RTX 5090, RTX 4090), high-speed networking.",
+        "Access to the Proxiant Datacenter: dedicated GPU servers (NVIDIA RTX PRO 6000 Blackwell, RTX 5090, RTX 4090), high-speed networking.",
         "Four-week compute extension after course end for project completion.",
         "Full session recordings on the workshop portal, available indefinitely.",
         "Capstone presentation slot and peer review.",

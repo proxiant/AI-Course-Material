@@ -22,7 +22,7 @@ def build_catalogue():
 
     add_body(doc, f"Start date: {START_DATE}")
     add_body(doc, f"Duration: {DURATION_WEEKS} weeks")
-    add_body(doc, "Format: Hybrid (in-person at Fremont campus, live Zoom, or both)")
+    add_body(doc, "Format: Hybrid (in-person at Frisco campus, live Zoom, or both)")
     add_body(doc, f"Tuition: {TUITION}")
     add_body(doc, "Schedule: Sundays 11 AM to 1 PM PT (main session) and 5 to 9 PM PT (lab block). Tuesday and Thursday 7 to 10 PM PT (labs). Wednesday 8:30 to 10 AM PT (summary and quiz).")
     add_body(doc, "")
@@ -69,7 +69,7 @@ def build_catalogue():
         "12 weekly quizzes (Wednesday mornings) covering both theory and lab material.",
         "12 weekly take-home projects, each peer-reviewed.",
         "12 weekly research paper reading guides with annotated questions.",
-        "Access to the Proxiant Ray cluster: 20+ GPU servers, 40+ NVIDIA GPUs (RTX PRO 6000 Blackwell, RTX 5090, RTX 4090).",
+        "Access to the Proxiant Ray cluster: dedicated GPU servers (NVIDIA RTX PRO 6000 Blackwell, RTX 5090, RTX 4090).",
         "Discord access to instructors and TAs, plus office hours twice weekly.",
         "Full session recordings on the workshop portal, available indefinitely.",
         "Capstone presentation slot, peer review, and a written critique from faculty.",

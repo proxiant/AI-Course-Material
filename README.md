@@ -77,7 +77,7 @@ Two full-length books are maintained in this repository and included with enroll
 
 - **Self-Paced Online**: learn on your schedule with lifetime access to recorded lectures, assignments, and community support.
 - **Live Virtual Cohort**: interactive live sessions with instructors and peers, with real-time Q&A and networking.
-- **On-Site / Hybrid**: bootcamps run in person at the Fremont campus with a live Zoom option and recordings kept available. Bootcamp students get access to the Proxiant Datacenter (20+ GPU servers, 40+ NVIDIA GPUs).
+- **On-Site / Hybrid**: bootcamps run in person at the Frisco campus with a live Zoom option and recordings kept available. Bootcamp students get access to the Proxiant Datacenter.
 - **Corporate**: custom training delivered at your location, tailored to your team's needs.
 
 ---
