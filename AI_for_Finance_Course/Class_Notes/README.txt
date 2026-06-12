@@ -46,7 +46,7 @@ FILES INCLUDED (6 Total)
 6. Class_12_Capstone_Certification_Review_Notes.docx
    Topic: Capstone Presentations & Certification Review
    Size: 9.6 KB
-   Topics: Capstone structure, Evaluation rubrics, PCAP certification,
+   Topics: Capstone structure, Evaluation rubrics, PCAIP certification,
            Career pathways, Industry trends
 
 DOCUMENT FEATURES
@@ -111,14 +111,14 @@ Class 12: Capstone projects and career planning
 
 CERTIFICATION
 -------------
-These documents prepare students for the PCAP (Proxiant Certified
+These documents prepare students for the PCAIP (Proxiant Certified
 AI Professional) certification:
 - 100 multiple-choice questions
 - 3 hours duration
 - 70% pass threshold
 - Valid for 3 years
 
-Topic Distribution on PCAP Exam:
+Topic Distribution on PCAIP Exam:
 - Foundations: 15% (15 questions)
 - Risk Analysis: 25% (25 questions)
 - Forecasting: 20% (20 questions)

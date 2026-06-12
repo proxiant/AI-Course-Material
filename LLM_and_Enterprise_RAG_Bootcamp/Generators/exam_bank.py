@@ -1,4 +1,4 @@
-"""Final exam question bank for the PCAP-RAG certification exam.
+"""Final exam question bank for the PCAIP-RAG certification exam.
 
 60 fresh MCQs, 5 per week, written specifically for the exam. None of these
 stems appears in any weekly quiz; they test the same weekly topics with new

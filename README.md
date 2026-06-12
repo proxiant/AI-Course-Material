@@ -44,9 +44,9 @@ Additional programs (AI for Marketing, AI for HR, Prompt Engineering) are in dev
 
 ## Certification
 
-**Proxiant Certified AI Professional (PCAP)** validates mastery of AI concepts, tools, and applications.
+**Proxiant Certified AI Professional (PCAIP)** validates mastery of AI concepts, tools, and applications.
 
-**PCAP exam:**
+**PCAIP exam:**
 - Duration: 3 hours
 - Questions: 100 multiple choice
 - Pass score: 70%
@@ -54,7 +54,7 @@ Additional programs (AI for Marketing, AI for HR, Prompt Engineering) are in dev
 - Cost: $199
 - Eligibility: pass any Academy course with a 70% or higher weighted average
 
-**Bootcamp credentials:** each bootcamp has its own certification exam (60 MCQs plus 4 scenario questions, 240 points, 70% to pass) and issues its own credential: **PCAP-Agents** for the agents bootcamp, **PCAP-RAG** for the RAG bootcamp.
+**Bootcamp credentials:** each bootcamp has its own certification exam (60 MCQs plus 4 scenario questions, 240 points, 70% to pass) and issues its own credential: **PCAIP-Agents** for the agents bootcamp, **PCAIP-RAG** for the RAG bootcamp.
 
 **Benefits:**
 - Industry-recognized credential with a verifiable digital badge
@@ -112,7 +112,7 @@ Enterprise solutions designed for team and organizational learning.
 | Course Access | Single course | Unlimited courses | Unlimited + custom |
 | Price per Person | $1,499–$3,700 | $1,599–$2,199 | Custom quote |
 | Instructor Support | Community forum | Dedicated support | Dedicated team |
-| PCAP Certification | Available ($199) | Included | Included |
+| PCAIP Certification | Available ($199) | Included | Included |
 | Custom Curriculum | No | Available | Yes |
 | Analytics Dashboard | Basic | Advanced | Enterprise |
 | Flexible Scheduling | Standard | Flexible | Fully customizable |
@@ -137,8 +137,8 @@ Self-paced courses typically require 8–12 hours per week. Live cohort courses 
 **Can I get a refund if I'm not satisfied?**
 Yes. All courses carry a 14-day money-back guarantee.
 
-**Is the PCAP certification recognized by employers?**
-Yes. The PCAP is recognized by leading enterprises and demonstrates professional competence in AI.
+**Is the PCAIP certification recognized by employers?**
+Yes. The PCAIP is recognized by leading enterprises and demonstrates professional competence in AI.
 
 **What if I need to pause my course?**
 Self-paced courses offer lifetime access. Live cohort courses offer deferrals to future cohorts.

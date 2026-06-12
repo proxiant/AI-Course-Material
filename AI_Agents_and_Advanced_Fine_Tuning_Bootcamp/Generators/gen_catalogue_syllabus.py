@@ -73,7 +73,7 @@ def build_catalogue():
         "Discord access to instructors and TAs, plus office hours twice weekly.",
         "Full session recordings on the workshop portal, available indefinitely.",
         "Capstone presentation slot, peer review, and a written critique from faculty.",
-        "PCAP-Agents certificate on passing the final exam (separate from the standard PCAP).",
+        "PCAIP-Agents certificate on passing the final exam (separate from the standard PCAIP).",
     ]
     for x in included:
         add_bullet(doc, x)
@@ -146,10 +146,10 @@ def build_syllabus():
         ("Lab participation", "15%", "Attendance and submitted lab artifacts"),
         ("Paper presentations", "10%", "One per student over the cohort"),
         ("Capstone project", "25%", "Code, presentation, peer review"),
-        ("Final certification exam", "5%", "PCAP-Agents written exam"),
+        ("Final certification exam", "5%", "PCAIP-Agents written exam"),
     ]
     add_table(doc, ["Component", "Weight", "Description"], grading, col_widths=[1.8, 0.8, 4.2])
-    add_body(doc, "Passing grade is 70%. PCAP-Agents certificate issued on pass.")
+    add_body(doc, "Passing grade is 70%. PCAIP-Agents certificate issued on pass.")
 
     add_h1(doc, "Required Tooling")
     tooling = [

@@ -18,7 +18,7 @@ Built for engineers who already work with LLMs and want production-grade depth i
 | `Weekly_Quizzes/` | 12 MCQ + 3 short-answer quizzes plus answer keys | 24 |
 | `Weekly_Projects/` | Project briefs with rubrics plus reference solution sketches | 24 |
 | `Research_Papers/` | Weekly paper reading guides with discussion questions | 12 |
-| `Certification_Test/` | PCAP-Agents final exam (60 MCQ + 4 scenarios) plus key | 2 |
+| `Certification_Test/` | PCAIP-Agents final exam (60 MCQ + 4 scenarios) plus key | 2 |
 | `Generators/` | Python source for regenerating all materials | 14 |
 
 ---
@@ -63,7 +63,7 @@ Built for engineers who already work with LLMs and want production-grade depth i
 | Capstone project | 25% |
 | Final certification exam | 5% |
 
-Passing grade: 70%. PCAP-Agents certificate issued on pass.
+Passing grade: 70%. PCAIP-Agents certificate issued on pass.
 
 ---
 

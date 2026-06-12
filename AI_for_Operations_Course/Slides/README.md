@@ -46,7 +46,7 @@
 
 ## Certification
 
-The course includes a final certification test: 60 questions, 90 minutes, 70% to pass. Graduates also qualify to sit the PCAP exam (100 MCQ, 3 hours, $199, valid 3 years). Class 12 covers exam structure and preparation.
+The course includes a final certification test: 60 questions, 90 minutes, 70% to pass. Graduates also qualify to sit the PCAIP exam (100 MCQ, 3 hours, $199, valid 3 years). Class 12 covers exam structure and preparation.
 
 ---
 

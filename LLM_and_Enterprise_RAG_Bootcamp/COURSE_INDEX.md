@@ -18,7 +18,7 @@ Hackathon-style, coding-centered bootcamp that bridges foundational ML theory wi
 | `Weekly_Quizzes/` | 12 MCQ + 3 short-answer quizzes plus answer keys with model answers | 24 |
 | `Weekly_Projects/` | Project briefs with rubrics plus reference solution sketches | 24 |
 | `Research_Papers/` | Weekly paper reading guides with discussion questions | 12 |
-| `Certification_Test/` | PCAP-RAG final exam (60 MCQ + 4 scenarios) plus key | 2 |
+| `Certification_Test/` | PCAIP-RAG final exam (60 MCQ + 4 scenarios) plus key | 2 |
 | `Generators/` | Python source for regenerating all materials | 8 |
 
 ---
@@ -65,7 +65,7 @@ Hackathon-style, coding-centered bootcamp that bridges foundational ML theory wi
 | Capstone project | 25% |
 | Final certification exam | 5% |
 
-Passing grade: 70%. PCAP-RAG certificate issued on pass.
+Passing grade: 70%. PCAIP-RAG certificate issued on pass.
 
 Capstone = week 12 project, graded separately (25%). Weeks 1-11 projects count toward the 30% team-project component.
 

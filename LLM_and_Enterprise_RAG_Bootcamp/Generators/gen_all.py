@@ -96,7 +96,7 @@ def build_catalogue():
         "Four-week compute extension after course end for project completion.",
         "Full session recordings on the workshop portal, available indefinitely.",
         "Capstone presentation slot and peer review.",
-        "PCAP-RAG certificate on passing the final exam.",
+        "PCAIP-RAG certificate on passing the final exam.",
     ]
     for x in included:
         add_bullet(doc, x)
@@ -173,10 +173,10 @@ def build_syllabus():
         ("Lab participation", "15%", "Attendance and submitted artifacts"),
         ("Paper presentations", "10%", "One per student over the cohort"),
         ("Capstone project", "25%", "Code, presentation, peer review"),
-        ("Final certification exam", "5%", "PCAP-RAG written exam"),
+        ("Final certification exam", "5%", "PCAIP-RAG written exam"),
     ]
     add_table(doc, ["Component", "Weight", "Description"], grading, col_widths=[1.8, 0.8, 4.2])
-    add_body(doc, "Passing grade is 70%. PCAP-RAG certificate issued on pass.")
+    add_body(doc, "Passing grade is 70%. PCAIP-RAG certificate issued on pass.")
 
     add_h1(doc, "Required Tooling")
     tooling = [
@@ -746,7 +746,7 @@ def build_cert_test():
     for with_answers in (False, True):
         doc = new_doc()
         suffix = ": Answer Key" if with_answers else ""
-        add_title(doc, f"PCAP-RAG Final Certification Exam{suffix}", size=22)
+        add_title(doc, f"PCAIP-RAG Final Certification Exam{suffix}", size=22)
         add_subtitle(doc, COURSE_NAME, size=14)
         add_subtitle(doc, f"Duration: 3 hours | Total: 240 points | Pass: 168 (70%) | Instructor: {INSTRUCTOR}", size=11)
         add_divider(doc)
@@ -790,12 +790,12 @@ def build_cert_test():
 
         add_h1(doc, "Certification")
         add_body(doc,
-            "A passing grade earns the PCAP-RAG certificate, recognized "
+            "A passing grade earns the PCAIP-RAG certificate, recognized "
             "across the Proxiant alumni network and partner employers. The "
             "certificate is valid for 3 years; renewal requires either a "
             "continuing-education credit or re-examination.")
 
-        fname = f"PCAP_RAG_Final_Exam{'_Solution' if with_answers else ''}.docx"
+        fname = f"PCAIP_RAG_Final_Exam{'_Solution' if with_answers else ''}.docx"
         out = os.path.join(ROOT, "Certification_Test", fname)
         doc.save(out)
         print(f"WROTE {out}")

@@ -4,7 +4,7 @@
 **Course Level:** Foundational to Intermediate  
 **Duration:** 4 Weeks (Intensive)  
 **Enrollment Fee:** $1,499  
-**Certification:** PCAP (Proxiant Certified AI Professional)
+**Certification:** PCAIP (Proxiant Certified AI Professional)
 
 ---
 
@@ -17,7 +17,7 @@ AI Fundamentals is a comprehensive 4-week intensive course designed to provide a
 - Understand core problem-solving algorithms and search methods
 - Build practical machine learning and deep learning models
 - Explore generative AI, ethics, and strategic AI adoption
-- Qualify for industry-recognized PCAP certification
+- Qualify for industry-recognized PCAIP certification
 
 ### Learning Outcomes
 Upon successful completion, students will be able to:
@@ -34,9 +34,9 @@ Upon successful completion, students will be able to:
 
 ---
 
-## PCAP Certification Details
+## PCAIP Certification Details
 
-**Proxiant Certified AI Professional (PCAP)**
+**Proxiant Certified AI Professional (PCAIP)**
 
 | Attribute | Details |
 |-----------|---------|
@@ -68,7 +68,7 @@ Upon successful completion, students will be able to:
 - **Format:** 100 multiple choice questions
 - **Passing Score:** 70% overall weighted average
 
-**Note:** Passing score of 70% qualifies students for PCAP certification exam.
+**Note:** Passing score of 70% qualifies students for PCAIP certification exam.
 
 ---
 
@@ -81,7 +81,7 @@ Upon successful completion, students will be able to:
    - Target audience and learning objectives
    - Weekly topic breakdown
    - Assessment and certification details
-   - PCAP specification table
+   - PCAIP specification table
    - Enrollment and exam pricing
 
 2. **AI_Fundamentals_Syllabus.docx** (22 KB)
@@ -89,7 +89,7 @@ Upon successful completion, students will be able to:
    - Detailed learning outcomes
    - Weekly schedule breakdown
    - Course policies and expectations
-   - PCAP certification section
+   - PCAIP certification section
    - Required resources and references
 
 3. **Final_Certification_Test.docx** (19 KB)
@@ -198,7 +198,7 @@ Upon successful completion, students will be able to:
 - Privacy and regulatory landscape
 - AI applications across industries
 - Building AI strategy and roadmaps
-- PCAP certification preparation
+- PCAIP certification preparation
 
 ---
 
@@ -286,14 +286,14 @@ AI-Course-Material/AI Fundamentals Course/
 6. Submit **Week#_Assignment.docx** for evaluation
 7. Develop **Week#_Project.docx** for hands-on experience
 8. Review all materials before **Final_Certification_Test.docx**
-9. Upon passing, pursue PCAP certification exam
+9. Upon passing, pursue PCAIP certification exam
 
-### For PCAP Preparation
-1. Review PCAP details in catalogue and syllabus
+### For PCAIP Preparation
+1. Review PCAIP details in catalogue and syllabus
 2. Study all four weeks comprehensively
 3. Complete all exercises, assignments, and projects
 4. Practice with final certification test
-5. Register for PCAP exam upon course completion (70%+ passing grade)
+5. Register for PCAIP exam upon course completion (70%+ passing grade)
 6. Use all course materials for exam review
 
 ---
@@ -305,7 +305,7 @@ AI-Course-Material/AI Fundamentals Course/
 | Week 1 | All Week 1 exercises, Assignment 1, Project 1 | Foundations mastery |
 | Week 2 | All Week 2 exercises, Assignment 2, Project 2 | ML fundamentals |
 | Week 3 | All Week 3 exercises, Assignment 3, Project 3 | Deep learning |
-| Week 4 | All Week 4 exercises, Assignment 4, Project 4, Final Exam | PCAP eligibility |
+| Week 4 | All Week 4 exercises, Assignment 4, Project 4, Final Exam | PCAIP eligibility |
 
 ---
 
@@ -338,14 +338,14 @@ For course enrollment or inquiries, visit the Proxiant Academy website.
 
 **Recent Updates to This Course:**
 - Updated branding to "Proxiant Academy"
-- Integrated PCAP certification details and specifications
+- Integrated PCAIP certification details and specifications
 - Added enrollment fee: $1,499
 - Added exam cost: $199
 - Updated all copyright notices to 2026
 
 **Document Versions:**
-- AI_Fundamentals_Course_Catalogue.docx v2.0 (PCAP-integrated)
-- AI_Fundamentals_Syllabus.docx v2.0 (PCAP-integrated)
+- AI_Fundamentals_Course_Catalogue.docx v2.0 (PCAIP-integrated)
+- AI_Fundamentals_Syllabus.docx v2.0 (PCAIP-integrated)
 - All week materials current as of February 2026
 
 ---

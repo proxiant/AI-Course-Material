@@ -1,4 +1,4 @@
-"""Generate the final PCAP-Agents certification exam and solution."""
+"""Generate the final PCAIP-Agents certification exam and solution."""
 import os
 import sys
 
@@ -102,7 +102,7 @@ SCENARIOS = [
 def build_exam(with_answers=False):
     doc = new_doc()
     suffix = ": Answer Key" if with_answers else ""
-    add_title(doc, f"PCAP-Agents Final Certification Exam{suffix}", size=22)
+    add_title(doc, f"PCAIP-Agents Final Certification Exam{suffix}", size=22)
     add_subtitle(doc, "AI Agents and Advanced Fine-Tuning Bootcamp", size=14)
     add_subtitle(doc, "Duration: 3 hours | Total: 240 points | Pass: 168 (70%)", size=11)
     add_divider(doc)
@@ -144,7 +144,7 @@ def build_exam(with_answers=False):
 
     add_h1(doc, "Certification")
     add_body(doc,
-        "A passing grade earns the PCAP-Agents certificate, recognized "
+        "A passing grade earns the PCAIP-Agents certificate, recognized "
         "across the Proxiant alumni network and partner employers. The "
         "certificate is valid for 3 years; renewal requires either a "
         "completed continuing-education credit or re-examination.")
@@ -152,7 +152,7 @@ def build_exam(with_answers=False):
     add_divider(doc)
     add_footer_brand(doc)
 
-    fname = f"PCAP_Agents_Final_Exam{'_Solution' if with_answers else ''}.docx"
+    fname = f"PCAIP_Agents_Final_Exam{'_Solution' if with_answers else ''}.docx"
     out = os.path.join(ROOT, "Certification_Test", fname)
     doc.save(out)
     print(f"WROTE {out}")
